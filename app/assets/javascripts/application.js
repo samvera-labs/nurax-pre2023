@@ -10,6 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+//= 
 //= require turbolinks
+//
+// Required by Blacklight
+//= require jquery
+//= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require blacklight/blacklight
+
 //= require_tree .
+//= require hyrax
+

@@ -63,3 +63,5 @@ end
 gem 'hyrax', github: 'samvera/hyrax'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
+gem 'rsolr', '>= 1.0'
+gem 'jquery-rails'
