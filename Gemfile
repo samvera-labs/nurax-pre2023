@@ -61,6 +61,5 @@ group :development, :test do
 end
 
 gem 'hyrax', github: 'samvera/hyrax'
-gem 'rsolr', '~> 2.0'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
