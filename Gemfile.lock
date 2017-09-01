@@ -634,9 +634,7 @@ GEM
       mime-types (>= 1.16)
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
-    chromedriver-helper (1.1.0)
-      archive-zip (~> 0.7.0)
-      nokogiri (~> 1.6)
+    clamav (0.4.1)
     clipboard-rails (1.7.1)
     coderay (1.1.1)
     coffee-rails (4.2.2)
@@ -1205,7 +1203,7 @@ DEPENDENCIES
   capistrano-passenger
   capistrano-rails
   capybara (~> 2.13)
-  chromedriver-helper
+  clamav
   coffee-rails (~> 4.2)
   database_cleaner
   devise
@@ -1232,4 +1230,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.15.4
