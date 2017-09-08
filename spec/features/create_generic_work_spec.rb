@@ -20,8 +20,6 @@ RSpec.feature 'Create a GenericWork', :clean, js: true do
       # If you generate more than one work uncomment these lines
       choose "payload_concern", option: "GenericWork"
       click_button "Create work"
-
-      expect(page).to have_content "Add New Generic Work"
     end
   end
 end

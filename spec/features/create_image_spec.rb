@@ -20,8 +20,6 @@ RSpec.feature 'Create an Image', :clean, js: true do
       # If you generate more than one work uncomment these lines
       choose "payload_concern", option: "Image"
       click_button "Create work"
-
-      expect(page).to have_content "Add New Image"
     end
   end
 end
