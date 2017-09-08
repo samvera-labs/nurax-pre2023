@@ -1,7 +1,13 @@
 development:
   archivist:
     - archivist1@example.com
-
+  admin:
+    - mjgiarlo@stanford.edu
+    - jrudder@email.unc.edu
+    - Steve.VanTuyl@oregonstate.edu
+    - chris-diaz@northwestern.edu
+    - shlakeuva@gmail.com
+    - hparekh@nd.edu
 test:
   archivist:
     - archivist1@example.com
@@ -21,3 +27,10 @@ test:
 
 production:
   # Add roles for users here.
+  admin:
+    - mjgiarlo@stanford.edu
+    - jrudder@email.unc.edu
+    - Steve.VanTuyl@oregonstate.edu
+    - chris-diaz@northwestern.edu
+    - shlakeuva@gmail.com
+    - hparekh@nd.edu
