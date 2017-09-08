@@ -3,6 +3,10 @@ dist: trusty
 language: ruby
 addons:
   - chrome: stable
+  - apt:
+      packages:
+        - libclamav-dev
+        - clamav
 cache:
   - bundler: true
 services:
