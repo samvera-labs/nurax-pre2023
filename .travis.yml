@@ -1,18 +1,29 @@
 sudo: false
 dist: trusty
 language: ruby
-cache: bundler
+addons:
+  - chrome: stable
+cache:
+  - bundler: true
 services:
-- redis-server
+  - redis-server
+  - postgresql
 rvm:
-- 2.3.4
+  - 2.4.1
 before_script:
-- bundle exec rake db:create
+  - bundle exec rake db:create
+before_install:
+  - gem update --system
+  - gem install bundler
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 script:
-- bundle exec rake spec
+  - bundle exec rake spec
 after_success:
   - "openssl aes-256-cbc -k $DEPLOY_KEY -in config/nurax-travis-enc -d -a -out config/nurax-travis"
   - test $TRAVIS_BRANCH = "master" && "bundle exec cap travis deploy"
+jdk:
+  - oraclejdk8
 env:
   global:
-    secure: ZIsMcHClO9WvQwyiK1H6AKZYkuY9ZtJBbliQ2A2xc8HPNYSZAgdtiNhGxzl06U++bi2z5pLFKgVDMkGsRFVUJM+JagIHs7vpZUNcYWEgH4FddeokmpycjlFz8ddgEIa7qdliwoWnZqfA+GEjTNT93N2nzHE4mAhPiOavNEcwVHbNdjMRcYfZpNszvVXRm7olUUm0RbmR9FCDJnPAvh91XFcTQy0WPR8rr5fQhcNwRGc98widcQVzZ2ufb17SCcjKcOGSABC9Y6P+zVYMBzTkua2jz0r61bx6flK1gkRqPMpaPSUNGpbCoU12ZrIlBy/c4/3n9Cg6mIPK2u62DQEXaor/ztVXO/pDAiRGiCH4HuYoqxs0/gb3/X5Nv7oEN6KZg81ZND08MI0O0o7OF6iTONoeGaCM3HVdZRwAd5Hi3f97m+Yfbntz6EsKJTEWxbnBxiHYPCG3hppiqVGJ19A7OArdu2jRbnKDx9afR/A1GfLGEQe2eSnZMymxfDGqMMnxoojmP61D1SSbU6+s2ukkVrksRgMnyQ44Ey6WMJ8ObZhhkBXlUhlpfYy3a4EDZF4XOmQEXAyLWbj1kYoV3T4yM9dNk8/zTaa1RIpvZYL4T7Mkqyn0rh9eBA3a2c5rxKXBLIb64K2H7fkaIv6w7A+FzW5Ez/bHmz5VwDUJ7BXDT4o=
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - secure: ZIsMcHClO9WvQwyiK1H6AKZYkuY9ZtJBbliQ2A2xc8HPNYSZAgdtiNhGxzl06U++bi2z5pLFKgVDMkGsRFVUJM+JagIHs7vpZUNcYWEgH4FddeokmpycjlFz8ddgEIa7qdliwoWnZqfA+GEjTNT93N2nzHE4mAhPiOavNEcwVHbNdjMRcYfZpNszvVXRm7olUUm0RbmR9FCDJnPAvh91XFcTQy0WPR8rr5fQhcNwRGc98widcQVzZ2ufb17SCcjKcOGSABC9Y6P+zVYMBzTkua2jz0r61bx6flK1gkRqPMpaPSUNGpbCoU12ZrIlBy/c4/3n9Cg6mIPK2u62DQEXaor/ztVXO/pDAiRGiCH4HuYoqxs0/gb3/X5Nv7oEN6KZg81ZND08MI0O0o7OF6iTONoeGaCM3HVdZRwAd5Hi3f97m+Yfbntz6EsKJTEWxbnBxiHYPCG3hppiqVGJ19A7OArdu2jRbnKDx9afR/A1GfLGEQe2eSnZMymxfDGqMMnxoojmP61D1SSbU6+s2ukkVrksRgMnyQ44Ey6WMJ8ObZhhkBXlUhlpfYy3a4EDZF4XOmQEXAyLWbj1kYoV3T4yM9dNk8/zTaa1RIpvZYL4T7Mkqyn0rh9eBA3a2c5rxKXBLIb64K2H7fkaIv6w7A+FzW5Ez/bHmz5VwDUJ7BXDT4o=
