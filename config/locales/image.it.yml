@@ -1,8 +1,8 @@
 it:
   hyrax:
     icons:
-      image:     'fa fa-file-text-o'
+      image:     'fa fa-picture-o'
     select_type:
       image:
-        name:               "Image"
-        description:        "Image opere"
+        name:               "Immagine"
+        description:        "L'immagine singola o multi-pagina funziona."
