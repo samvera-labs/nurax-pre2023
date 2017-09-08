@@ -72,3 +72,5 @@ gem 'devise'
 gem 'devise-guests', '~> 0.6'
 gem 'rsolr', '~> 2.0'
 gem 'jquery-rails'
+gem 'clamav' unless ENV['TRAVIS']
+gem 'sidekiq'
