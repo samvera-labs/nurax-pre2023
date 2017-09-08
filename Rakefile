@@ -7,7 +7,7 @@ task default: :ci
 
 Rails.application.load_tasks
 
-require 'solr_wrapper/rake_task'
+require 'solr_wrapper/rake_task' unless Rails.env.production?
 
 task :ci do
   with_server 'test' do
