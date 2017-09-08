@@ -4,7 +4,5 @@ zh:
       generic_work:     'fa fa-file-text-o'
     select_type:
       generic_work:
-        # TODO: translate `human_name` into Chinese
-        name:               "Generic Work"
-        # TODO: translate `human_name` into Chinese
-        description:        "Generic work 作品"
+        name:               "通用工作"
+        description:        "通用工作类型。 如果下面的更具体的工作类型不适合您要添加的工作，请选择此项。"

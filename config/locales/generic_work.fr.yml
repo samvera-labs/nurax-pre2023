@@ -4,5 +4,5 @@ fr:
       generic_work:     'fa fa-file-text-o'
     select_type:
       generic_work:
-        name:               "Generic Work"
-        description:        "Generic work œuvres"
+        name:               "Œuvres Génériques"
+        description:        "Type de travail à usage général. Sélectionnez cette option si les types de travaux plus spécifiques ci-dessous ne conviennent pas au travail que vous souhaitez ajouter."

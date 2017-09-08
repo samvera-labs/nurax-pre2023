@@ -1,10 +1,8 @@
 zh:
   hyrax:
     icons:
-      image:     'fa fa-file-text-o'
+      image:     'fa fa-picture-o'
     select_type:
       image:
-        # TODO: translate `human_name` into Chinese
-        name:               "Image"
-        # TODO: translate `human_name` into Chinese
-        description:        "Image 作品"
+        name:               "图片"
+        description:        "单页或多页图像工作。"

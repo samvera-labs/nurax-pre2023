@@ -4,7 +4,5 @@ es:
       generic_work:     'fa fa-file-text-o'
     select_type:
       generic_work:
-        # TODO: translate `human_name` into Spanish
-        name:               "Generic Work"
-        # TODO: translate `human_name` into Spanish
-        description:        "Generic work trabajos"
+        name:               "Trabajo Genérico"
+        description:        "Tipo de trabajo de propósito general. Seleccione esta opción si los tipos de trabajo más específicos de abajo no son adecuados para el trabajo que desea agregar."
