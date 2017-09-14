@@ -21,7 +21,7 @@ set :branch, ENV['REVISION'] || ENV['BRANCH'] || 'master'
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/analytics.yml", "config/blacklight.yml", "config/browse_everything_providers.yml", "config/database.yml", "config/fedora.yml", "config/role_map.yml", "config/secrets.yml", "config/solr.yml"
+append :linked_files, "config/analytics.yml", "config/blacklight.yml", "config/browse_everything_providers.yml", "config/database.yml", "config/fedora.yml", "config/secrets.yml", "config/solr.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
