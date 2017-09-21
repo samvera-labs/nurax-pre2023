@@ -37,7 +37,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
-  gem 'capistrano-sidekiq' 
+  gem 'capistrano-sidekiq'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'solr_wrapper', '>= 0.3'

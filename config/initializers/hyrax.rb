@@ -96,6 +96,9 @@ Hyrax.config do |config|
   # of Zotero-managed research items.
   # config.arkivo_api = false
 
+  # Stream realtime notifications to users in the browser
+  config.realtime_notifications = false
+
   # Location autocomplete uses geonames to search for named regions
   # Username for connecting to geonames
   config.geonames_username = 'nuraxdemo'
