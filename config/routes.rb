@@ -1,15 +1,18 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
-  mount Blacklight::Engine => '/'
-  mount BrowseEverything::Engine => '/browse'
-  mount Hyrax::Engine, at: '/'
+  # This needs to appear before Hyrax's routes else sign_in and sign_out break
+  devise_for :users
+
+  mount BrowseEverything::Engine, at: '/browse'
   mount Qa::Engine => '/authorities'
-  require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
+  mount Blacklight::Engine, at: '/'
+  mount Hyrax::Engine, at: '/'
 
   concern :exportable, Blacklight::Routes::Exportable.new
   concern :searchable, Blacklight::Routes::Searchable.new
 
-  devise_for :users
   curation_concerns_basic_routes
 
   resources :bookmarks do
