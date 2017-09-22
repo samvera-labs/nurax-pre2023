@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 403401f0078f7d42272b69baf05a6426f9d7a011
+  revision: a8873d1c3647bbe7a326221192e726de77a76e5d
   specs:
-    hyrax (2.0.0.beta3)
+    hyrax (2.0.0.beta4)
       active-fedora (>= 11.3.1)
       active_fedora-noid (~> 2.0, >= 2.0.2)
       almond-rails (~> 0.1)
@@ -150,7 +150,7 @@ GEM
     aws-sdk-batch (1.1.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-budgets (1.1.0)
+    aws-sdk-budgets (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-clouddirectory (1.0.0)
@@ -183,7 +183,7 @@ GEM
     aws-sdk-cloudwatchevents (1.1.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-cloudwatchlogs (1.1.0)
+    aws-sdk-cloudwatchlogs (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-codebuild (1.2.0)
@@ -244,7 +244,7 @@ GEM
     aws-sdk-dynamodbstreams (1.0.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-ec2 (1.8.0)
+    aws-sdk-ec2 (1.9.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-ecr (1.1.0)
