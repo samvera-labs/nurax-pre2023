@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 2e0f7ec5d65e3630f2828b087405296145d440cb
+  revision: 56a345fa62320cecf28ba1753a6efff0f0650f51
   specs:
     hyrax (2.0.0.beta4)
       active-fedora (>= 11.3.1)
@@ -156,7 +156,7 @@ GEM
     aws-sdk-clouddirectory (1.0.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-cloudformation (1.1.0)
+    aws-sdk-cloudformation (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-cloudfront (1.0.0)
@@ -825,9 +825,9 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (2.1.0)
-    json-ld (2.1.5)
+    json-ld (2.1.6)
       multi_json (~> 1.12)
-      rdf (~> 2.2)
+      rdf (~> 2.2, >= 2.2.8)
     json-ld-preloaded (2.2.2)
       json-ld (~> 2.1, >= 2.1.5)
       multi_json (~> 1.11)
@@ -992,7 +992,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rdf (2.2.9)
+    rdf (2.2.10)
       hamster (~> 3.0)
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (2.2.0)
@@ -1041,7 +1041,7 @@ GEM
     rdf-turtle (2.2.0)
       ebnf (~> 1.1)
       rdf (~> 2.2)
-    rdf-vocab (2.2.6)
+    rdf-vocab (2.2.7)
       rdf (~> 2.2)
     rdf-xsd (2.2.0)
       rdf (~> 2.1)
@@ -1085,7 +1085,7 @@ GEM
       json
       multipart-post
       oauth2
-    ruby-progressbar (1.8.3)
+    ruby-progressbar (1.9.0)
     rubyzip (1.2.1)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
