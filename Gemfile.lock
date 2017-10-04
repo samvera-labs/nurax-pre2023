@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 0d2e40e2ed09b07645dd71892e65c93aa58c88f9
+  revision: 7639c6af52215a39bc998ac0d678c612fc828031
   specs:
     hyrax (2.0.0.beta4)
       active-fedora (>= 11.3.1)
