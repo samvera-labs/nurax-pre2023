@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 7639c6af52215a39bc998ac0d678c612fc828031
+  revision: 9e7d4b16c4c9b39aa60be02b15d2f6f413c6abf7
   specs:
     hyrax (2.0.0.beta4)
       active-fedora (>= 11.3.1)
@@ -72,7 +72,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active-fedora (11.4.0)
+    active-fedora (11.4.1)
       active-triples (~> 0.11.0)
       activemodel (>= 4.2, < 6)
       activesupport (>= 4.2.4, < 6)
