@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 75a0858b2774ae850ac10ad947c6ee370d07ade9
+  revision: 446b8b983167f62ecf4f1592e63fd27ca0150704
   specs:
     hyrax (2.0.0.beta4)
       active-fedora (>= 11.3.1)
@@ -1087,7 +1087,7 @@ GEM
       oauth2
     ruby-progressbar (1.9.0)
     rubyzip (1.2.1)
-    sass (3.5.1)
+    sass (3.5.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
