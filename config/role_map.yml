@@ -4,10 +4,11 @@ development:
   admin:
     - mjgiarlo@stanford.edu
     - jrudder@email.unc.edu
-    - Steve.VanTuyl@oregonstate.edu
+    - steve.vantuyl@oregonstate.edu
     - chris-diaz@northwestern.edu
-    - shlakeuva@gmail.com
+    - shlake@virginia.edu
     - hparekh@nd.edu
+    - gamontoya@ucsd.edu
 test:
   archivist:
     - archivist1@example.com
@@ -36,4 +37,5 @@ production:
     - hparekh@nd.edu
     - shanita@curationexperts.com
     - alicia@curationexperts.com
+    - gamontoya@ucsd.edu
 
