@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: b7fdd858430b2f813bfeb1a17aa03fdc079c3354
+  revision: 353b36749feddc464b8fafbe596b27eb129adbc8
   specs:
     hyrax (2.0.0.beta4)
       active-fedora (>= 11.3.1)
@@ -35,7 +35,7 @@ GIT
       oauth2 (~> 1.2)
       posix-spawn
       power_converter (~> 0.1, >= 0.1.2)
-      qa (~> 1.0)
+      qa (~> 2.0)
       rails (~> 5.0)
       rails_autolink (~> 1.1)
       rdf-rdfxml
@@ -210,7 +210,7 @@ GEM
     aws-sdk-cognitosync (1.0.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-configservice (1.1.0)
+    aws-sdk-configservice (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-core (3.6.0)
@@ -373,7 +373,7 @@ GEM
     aws-sdk-rds (1.4.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-redshift (1.0.0)
+    aws-sdk-redshift (1.1.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-rekognition (1.0.0)
@@ -494,7 +494,7 @@ GEM
     aws-sdk-route53domains (1.1.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.4.0)
+    aws-sdk-s3 (1.5.0)
       aws-sdk-core (~> 3)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
@@ -519,7 +519,7 @@ GEM
     aws-sdk-sns (1.1.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-sqs (1.1.0)
+    aws-sdk-sqs (1.2.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
     aws-sdk-ssm (1.2.0)
@@ -825,7 +825,7 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (2.1.0)
-    json-ld (2.1.6)
+    json-ld (2.1.7)
       multi_json (~> 1.12)
       rdf (~> 2.2, >= 2.2.8)
     json-ld-preloaded (2.2.2)
@@ -951,12 +951,12 @@ GEM
     power_converter (0.1.2)
     public_suffix (3.0.0)
     puma (3.9.1)
-    qa (1.2.0)
+    qa (2.0.0)
       activerecord-import
       deprecation
       faraday
       nokogiri (~> 1.6)
-      rails (>= 4.2.0, < 6.0)
+      rails (~> 5.0)
       rdf
     rack (2.0.3)
     rack-protection (2.0.0)
@@ -1129,7 +1129,7 @@ GEM
       httmultiparty
       httparty (>= 0.11.0)
       oauth2 (>= 0.9.2)
-    slop (4.5.0)
+    slop (4.6.0)
     solr_wrapper (1.1.0)
       faraday
       retriable
