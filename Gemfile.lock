@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 6be5e36fad2a62fdfce7f9a8ce641e8365f277f2
+  revision: 141a051f804f0ebd485aceb94d042f42a860183a
   specs:
-    hyrax (2.0.0.rc1)
+    hyrax (2.0.0.rc2)
       active-fedora (>= 11.3.1)
       active_fedora-noid (~> 2.0, >= 2.0.2)
       almond-rails (~> 0.1)
@@ -123,7 +123,7 @@ GEM
       execjs
     awesome_nested_set (3.1.3)
       activerecord (>= 4.0.0, < 5.2)
-    aws-partitions (1.27.0)
+    aws-partitions (1.28.0)
     aws-sdk-core (3.6.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
@@ -480,8 +480,8 @@ GEM
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.6.6)
-      mime-types (>= 1.16, < 4)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
     mailboxer (0.15.1)
       carrierwave (>= 0.5.8)
       rails (>= 5.0.0)
