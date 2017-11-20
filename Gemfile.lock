@@ -341,6 +341,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hiredis (0.6.1)
+    honeybadger (3.1.2)
     htmlentities (4.3.4)
     http_logger (0.5.1)
     httparty (0.15.6)
@@ -806,6 +807,7 @@ DEPENDENCIES
   devise-i18n
   factory_girl_rails
   fcrepo_wrapper
+  honeybadger (~> 3.1)
   hyrax!
   jbuilder (~> 2.5)
   jquery-rails
@@ -827,4 +829,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.0
