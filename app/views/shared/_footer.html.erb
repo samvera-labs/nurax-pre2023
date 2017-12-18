@@ -1,0 +1,18 @@
+<div class="blue-footer container">
+  <div class="row">
+
+    <div class="col-md-6 version">
+      QA Testing for <%= link_to 'Hyrax - branch: collections-sprint', "https://github.com/samvera/hyrax/tree/collections-sprint", class: "footer-link"  %>
+    </div>
+
+    <div class="pull-right col-md-4" id="copyright">
+      <span> &copy; <%= Date.today.year %> Samvera-Hyrax </span>
+      <br> Version
+      <div class="version">
+        SHA: <span title="<%= GIT_SHA %>">
+        <br>  Branch: <%= BRANCH %>
+        <br>  Updated: <%= LAST_DEPLOYED %></span>
+      </div>
+    </div>
+  </div>
+</div>
