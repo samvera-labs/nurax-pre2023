@@ -7,9 +7,10 @@
 
     <div class="pull-right col-md-4" id="copyright">
       <span> &copy; <%= Date.today.year %> Samvera-Hyrax </span>
-      <br> Version
+      <br> Nurax Version
       <div class="version">
-        SHA: <span title="<%= GIT_SHA %>">
+        ENV: <%= Rails.env %>
+        <br> SHA: <%= GIT_SHA %>
         <br>  Branch: <%= BRANCH %>
         <br>  Updated: <%= LAST_DEPLOYED %></span>
       </div>
