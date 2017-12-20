@@ -11,6 +11,7 @@ development:
     - gamontoya@ucsd.edu
     - rkati@email.unc.edu
     - jrc88@cornell.edu
+    - elr37@cornell.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -24,6 +25,7 @@ production:
     - gamontoya@ucsd.edu
     - rkati@email.unc.edu
     - jrc88@cornell.edu
+    - elr37@cornell.edu
 test:
   archivist:
     - archivist1@example.com
