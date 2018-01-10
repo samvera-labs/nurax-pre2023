@@ -11,6 +11,10 @@ development:
     - gamontoya@ucsd.edu
     - rkati@email.unc.edu
     - jrc88@cornell.edu
+    - brian.mcbride@utah.edu
+    - kmusio@artic.edu
+    - jmfrenzel@example.com
+    - cjcolvar@indiana.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -24,6 +28,10 @@ production:
     - gamontoya@ucsd.edu
     - rkati@email.unc.edu
     - jrc88@cornell.edu
+    - brian.mcbride@utah.edu
+    - kmusio@artic.edu
+    - jmfrenzel@example.com
+    - cjcolvar@indiana.edu
 test:
   archivist:
     - archivist1@example.com
