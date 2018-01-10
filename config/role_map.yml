@@ -16,6 +16,7 @@ development:
     - tom@curationexperts.com
     - jamie@curationexperts.com
     - valerie@curationexperts.com
+    - cjcolvar@indiana.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -35,6 +36,7 @@ production:
     - tom@curationexperts.com
     - jamie@curationexperts.com
     - valerie@curationexperts.com
+    - cjcolvar@indiana.edu
 test:
   archivist:
     - archivist1@example.com
