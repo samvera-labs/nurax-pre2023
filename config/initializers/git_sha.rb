@@ -23,3 +23,17 @@ LAST_DEPLOYED =
     else
       "Not in deployed environment"
     end
+
+HYRAX_BRANCH =
+    if File.exist?('Gemfile.lock')
+      `grep branch Gemfile.lock`.lines.first.chomp.lstrip.split(/ /)[1]
+    else
+      "Unknown Hyrax branch"
+    end
+
+HYRAX_BRANCH_REVISION =
+    if File.exist?('Gemfile.lock')
+      `grep revision Gemfile.lock`.lines.first.chomp.lstrip.split(/ /)[1]
+    else
+      "Unknown Hyrax branch"
+    end

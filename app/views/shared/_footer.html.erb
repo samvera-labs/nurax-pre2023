@@ -2,7 +2,11 @@
   <div class="row">
 
     <div class="col-md-6 version">
-      QA Testing for <%= link_to 'Hyrax - branch: collections-sprint', "https://github.com/samvera/hyrax/tree/collections-sprint", class: "footer-link"  %>
+      <br>QA Testing for Hyrax
+      <div class="version">
+        Hyrax Branch: <%= HYRAX_BRANCH %>
+        <br>Hyrax Revision: <%= link_to HYRAX_BRANCH_REVISION, "https://github.com/samvera/hyrax/tree/#{HYRAX_BRANCH_REVISION}", class: "footer-link"  %>
+      </div>
     </div>
 
     <div class="pull-right col-md-4" id="copyright">
@@ -10,9 +14,9 @@
       <br> Nurax Version
       <div class="version">
         ENV: <%= Rails.env %>
-        <br> SHA: <%= GIT_SHA %>
-        <br>  Branch: <%= BRANCH %>
-        <br>  Updated: <%= LAST_DEPLOYED %></span>
+        <br>SHA: <%= GIT_SHA %>
+        <br>Branch: <%= BRANCH %>
+        <br>Updated: <%= LAST_DEPLOYED %>
       </div>
     </div>
   </div>
