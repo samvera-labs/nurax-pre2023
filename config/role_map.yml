@@ -17,6 +17,10 @@ development:
     - jamie@curationexperts.com
     - valerie@curationexperts.com
     - cjcolvar@indiana.edu
+    - brian.mcbride@utah.edu
+    - kmusio@artic.edu
+    - johannes.frenzel@rub.de
+    - eporter@emory.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -37,6 +41,10 @@ production:
     - jamie@curationexperts.com
     - valerie@curationexperts.com
     - cjcolvar@indiana.edu
+    - brian.mcbride@utah.edu
+    - kmusio@artic.edu
+    - johannes.frenzel@rub.de
+    - eporter@emory.edu
 test:
   archivist:
     - archivist1@example.com
