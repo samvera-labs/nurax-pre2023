@@ -21,6 +21,7 @@ development:
     - kmusio@artic.edu
     - johannes.frenzel@rub.de
     - eporter@emory.edu
+    - naw4t@virginia.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -45,6 +46,7 @@ production:
     - kmusio@artic.edu
     - johannes.frenzel@rub.de
     - eporter@emory.edu
+    - naw4t@virginia.edu
 test:
   archivist:
     - archivist1@example.com
