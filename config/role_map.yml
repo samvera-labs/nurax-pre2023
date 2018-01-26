@@ -22,6 +22,7 @@ development:
     - johannes.frenzel@rub.de
     - eporter@emory.edu
     - naw4t@virginia.edu
+    - saidulla@iu.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -47,6 +48,7 @@ production:
     - johannes.frenzel@rub.de
     - eporter@emory.edu
     - naw4t@virginia.edu
+    - saidulla@iu.edu
 test:
   archivist:
     - archivist1@example.com
