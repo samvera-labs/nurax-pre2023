@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120193255) do
+ActiveRecord::Schema.define(version: 20180201145627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(version: 20171120193255) do
     t.boolean "require_membership", default: false, null: false
     t.boolean "assigns_workflow", default: false, null: false
     t.boolean "assigns_visibility", default: false, null: false
+    t.boolean "share_applies_to_new_works", default: true, null: false
     t.index ["machine_id"], name: "index_hyrax_collection_types_on_machine_id", unique: true
   end
 
@@ -229,6 +230,7 @@ ActiveRecord::Schema.define(version: 20171120193255) do
     t.string "access"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["permission_template_id", "agent_id", "agent_type", "access"], name: "uk_permission_template_accesses", unique: true
   end
 
   create_table "permission_templates", id: :serial, force: :cascade do |t|
