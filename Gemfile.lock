@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 94070aa58e804647740c9dfa66788e2318171749
-  branch: collections-sprint
+  revision: 51b45cc2dc35eb8101f3eec5bde28922b63a0872
+  branch: master
   specs:
     hyrax (2.1.0.alpha)
       active-fedora (~> 11.5, >= 11.5.2)
@@ -119,12 +119,12 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (8.0.0)
-    autoprefixer-rails (7.2.5)
+    autoprefixer-rails (8.0.0)
       execjs
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
-    aws-partitions (1.58.0)
-    aws-sdk-core (3.14.0)
+    aws-partitions (1.59.0)
+    aws-sdk-core (3.15.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
@@ -260,7 +260,7 @@ GEM
     dry-container (0.6.0)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.4.3)
+    dry-core (0.4.4)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.0)
     dry-logic (0.4.2)
@@ -315,7 +315,7 @@ GEM
       railties (>= 3.2, < 5.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    google-api-client (0.19.6)
+    google-api-client (0.19.7)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.5, < 0.7.0)
       httpclient (>= 2.8.1, < 3.0)
@@ -343,7 +343,7 @@ GEM
     honeybadger (3.1.2)
     htmlentities (4.3.4)
     http_logger (0.5.1)
-    httparty (0.15.6)
+    httparty (0.15.7)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
     hydra-access-controls (10.5.0)
@@ -385,7 +385,7 @@ GEM
       hydra-file_characterization (~> 0.3, >= 0.3.3)
       hydra-pcdm (>= 0.9)
       om (~> 3.1)
-    i18n (0.9.3)
+    i18n (0.9.4)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     iiif-presentation (0.2.0)
@@ -487,7 +487,7 @@ GEM
     logging (2.2.2)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    loofah (2.1.1)
+    loofah (2.2.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -540,7 +540,7 @@ GEM
     pg (0.21.0)
     posix-spawn (0.3.13)
     power_converter (0.1.2)
-    public_suffix (3.0.1)
+    public_suffix (3.0.2)
     pul_uv_rails (2.0.1)
     puma (3.9.1)
     qa (2.0.0)
