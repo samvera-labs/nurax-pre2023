@@ -23,6 +23,8 @@ development:
     - eporter@emory.edu
     - naw4t@virginia.edu
     - saidulla@iu.edu
+    - adam.arling@northwestern.edu 
+    - moira.downey@duke.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -49,6 +51,8 @@ production:
     - eporter@emory.edu
     - naw4t@virginia.edu
     - saidulla@iu.edu
+    - adam.arling@northwestern.edu 
+    - moira.downey@duke.edu
 test:
   archivist:
     - archivist1@example.com
