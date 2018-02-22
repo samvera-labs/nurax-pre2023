@@ -74,3 +74,5 @@ gem 'rsolr', '~> 2.0'
 gem 'jquery-rails'
 gem 'clamav'
 gem 'sidekiq'
+
+gem 'riiif', '~> 1.1'
