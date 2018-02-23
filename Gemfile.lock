@@ -653,6 +653,9 @@ GEM
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
     retriable (3.1.1)
+    riiif (1.7.0)
+      deprecation (>= 1.0.0)
+      railties (>= 4.2, < 6)
     rsolr (2.1.0)
       builder (>= 2.1.2)
       faraday (>= 0.9.0)
@@ -827,6 +830,7 @@ DEPENDENCIES
   pg
   puma (~> 3.7)
   rails (~> 5.1.2)
+  riiif (~> 1.1)
   rsolr (~> 2.0)
   rspec-rails
   sass-rails (~> 5.0)
