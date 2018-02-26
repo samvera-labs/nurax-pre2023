@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 5edc4f1d676cb73a347127623a242e621493b192
+  revision: c72d4af82f2ea2ccacac642dd4809208384f7bb4
   branch: master
   specs:
     hyrax (2.1.0.alpha)
@@ -124,15 +124,15 @@ GEM
       execjs
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
-    aws-partitions (1.63.0)
-    aws-sdk-core (3.15.0)
+    aws-partitions (1.67.0)
+    aws-sdk-core (3.16.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
     aws-sdk-kms (1.5.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.8.1)
+    aws-sdk-s3 (1.8.2)
       aws-sdk-core (~> 3)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
@@ -307,7 +307,7 @@ GEM
       faraday
     fcrepo_wrapper (0.8.0)
       ruby-progressbar
-    ffi (1.9.21)
+    ffi (1.9.23)
     flipflop (2.3.1)
       activesupport (>= 4.0)
     flot-rails (0.0.7)
@@ -544,7 +544,7 @@ GEM
     public_suffix (3.0.2)
     pul_uv_rails (2.0.1)
     puma (3.9.1)
-    qa (2.0.0)
+    qa (2.0.1)
       activerecord-import
       deprecation
       faraday
@@ -772,7 +772,7 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    tinymce-rails (4.7.6)
+    tinymce-rails (4.7.7)
       railties (>= 3.1.1)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
