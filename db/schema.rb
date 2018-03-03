@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301145057) do
+ActiveRecord::Schema.define(version: 20170714175457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -240,7 +240,6 @@ ActiveRecord::Schema.define(version: 20180301145057) do
     t.datetime "updated_at"
     t.date "release_date"
     t.string "release_period"
-    t.string "source_type"
     t.index ["source_id"], name: "index_permission_templates_on_source_id", unique: true
   end
 
