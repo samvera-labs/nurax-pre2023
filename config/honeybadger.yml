@@ -6,4 +6,4 @@ exceptions:
   ignore:
     - 'ActiveFedora::ObjectNotFoundError'
     - 'Blacklight::Exceptions::RecordNotFound'
-
+    - 'I18n::InvalidLocale'

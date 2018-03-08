@@ -14,5 +14,10 @@ module Nurax2
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # The locale is set by a query parameter, so if it's not found render 404
+    config.action_dispatch.rescue_responses.merge!(
+      'I18n::InvalidLocale' => :not_found
+    )
   end
 end
