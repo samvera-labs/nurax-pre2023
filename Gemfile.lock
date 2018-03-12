@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 8fe35f54e067fd499a4467b9ccbefa48233d43a2
-  branch: v2.1.0.beta1_qa
+  revision: 49a285a59ae37e5d6d368c48b4e99ab81acc4ec5
+  branch: v2.1.0_beta1a_qa
   specs:
     hyrax (2.1.0.beta1)
       active-fedora (~> 11.5, >= 11.5.2)
@@ -23,7 +23,7 @@ GIT
       hydra-editor (~> 3.3)
       hydra-head (>= 10.5.0)
       hydra-works (~> 0.16)
-      iiif_manifest (~> 0.3.0)
+      iiif_manifest (>= 0.3, < 0.5)
       jquery-datatables-rails (~> 3.4)
       jquery-ui-rails (~> 6.0)
       json-schema
@@ -48,7 +48,7 @@ GIT
       samvera-nesting_indexer (~> 1.0, >= 1.0.1)
       select2-rails (~> 3.5)
       signet
-      simple_form (= 3.5.0)
+      simple_form (~> 3.2, <= 3.5.0)
       tinymce-rails (~> 4.1)
 
 GEM
@@ -120,11 +120,11 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (8.0.0)
-    autoprefixer-rails (8.1.0)
+    autoprefixer-rails (8.1.0.1)
       execjs
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
-    aws-partitions (1.68.0)
+    aws-partitions (1.70.0)
     aws-sdk-core (3.17.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
@@ -293,7 +293,7 @@ GEM
       sxp (~> 1.0)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
-    erubi (1.7.0)
+    erubi (1.7.1)
     erubis (2.7.0)
     execjs (2.7.0)
     factory_girl (4.8.0)
@@ -389,13 +389,8 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    iiif-presentation (0.2.0)
-      activesupport (>= 3.2.18)
-      faraday (>= 0.9)
-      json
-    iiif_manifest (0.3.0)
+    iiif_manifest (0.4.0)
       activesupport (>= 4)
-      iiif-presentation (~> 0.2.0)
     inflecto (0.0.2)
     io-like (0.3.0)
     jbuilder (2.7.0)
@@ -582,7 +577,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.3.0)
-    rb-fsevent (0.10.2)
+    rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdf (2.2.12)
