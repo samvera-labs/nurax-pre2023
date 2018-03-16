@@ -26,6 +26,7 @@ development:
     - adam.arling@northwestern.edu 
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
+    - lrobins5@nd.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -55,6 +56,7 @@ production:
     - adam.arling@northwestern.edu 
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
+    - lrobins5@nd.edu
 test:
   archivist:
     - archivist1@example.com
