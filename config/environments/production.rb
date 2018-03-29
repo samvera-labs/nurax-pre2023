@@ -11,7 +11,10 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  # To display stack traces in production, you want 
+  # config.consider_all_requests_local       = true
+  # To hide stack traces in production, set this to false.
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   # Use Sidekiq to process background jobs
