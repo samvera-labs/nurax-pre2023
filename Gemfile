@@ -11,7 +11,7 @@ gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use postgresql on the sandbox
-gem 'pg'
+gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
+  gem 'bixby'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capistrano'
   gem 'capistrano-bundler'
