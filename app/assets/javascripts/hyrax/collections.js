@@ -231,39 +231,39 @@ Blacklight.onLoad(function () {
 
   // Delete selected collections button click
   $('#delete-collections-button').on('click', function () {
-    var tableRows = $('#documents table.collections-list-table tbody tr');
-    var checkbox = null;
-    var numRowsSelected = false;
-    var deleteWording = {
-      plural: 'these collections',
-      singular: 'this collection'
-    };
-    var $deleteWordingTarget = $('#selected-collections-delete-modal .pluralized');
-
-    var canDeleteAll = true;
-    var selectedInputs = $('#documents table.collections-list-table tbody tr')
-      // Get all inputs in the table
-      .find('td:first input[type=checkbox]')
-      // Filter to those that are checked
-      .filter((i, checkbox) => checkbox.checked)
-
-    var cannotDeleteInputs = selectedInputs.filter((i, checkbox) => (checkbox.dataset.hasaccess === "false"))
-    if(cannotDeleteInputs.length > 0) {
-      // TODO: Can we pass data to this modal to be more specific about which ones they cannot delete?
-      $('#collections-to-delete-deny-modal').modal('show');
-      return;
-    }
-
-    if (selectedInputs.length > 0) {
-      // Collections are selected
-      // Update singular / plural text in delete modal
-      if (selectedInputs.length > 1) {
-        $deleteWordingTarget.text(deleteWording.plural);
-      } else {
-        $deleteWordingTarget.text(deleteWording.singular);
-      }
-      $('#selected-collections-delete-modal').modal('show');
-    }
+    // var tableRows = $('#documents table.collections-list-table tbody tr');
+    // var checkbox = null;
+    // var numRowsSelected = false;
+    // var deleteWording = {
+    //   plural: 'these collections',
+    //   singular: 'this collection'
+    // };
+    // var $deleteWordingTarget = $('#selected-collections-delete-modal .pluralized');
+    //
+    // var canDeleteAll = true;
+    // var selectedInputs = $('#documents table.collections-list-table tbody tr')
+    //   // Get all inputs in the table
+    //   .find('td:first input[type=checkbox]')
+    //   // Filter to those that are checked
+    //   .filter((i, checkbox) => checkbox.checked)
+    //
+    // var cannotDeleteInputs = selectedInputs.filter((i, checkbox) => (checkbox.dataset.hasaccess === "false"))
+    // if(cannotDeleteInputs.length > 0) {
+    //   // TODO: Can we pass data to this modal to be more specific about which ones they cannot delete?
+    //   $('#collections-to-delete-deny-modal').modal('show');
+    //   return;
+    // }
+    //
+    // if (selectedInputs.length > 0) {
+    //   // Collections are selected
+    //   // Update singular / plural text in delete modal
+    //   if (selectedInputs.length > 1) {
+    //     $deleteWordingTarget.text(deleteWording.plural);
+    //   } else {
+    //     $deleteWordingTarget.text(deleteWording.singular);
+    //   }
+    //   $('#selected-collections-delete-modal').modal('show');
+    // }
   });
 
   $('#show-more-parent-collections').on('click', function () {
