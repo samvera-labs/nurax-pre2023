@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 2ac3d423d9805c31e0b92df0a26eff76cf03a81e
-  branch: v2.1.0.beta2a_qa
+  revision: 0d39af0518934c1ff0904722b99bfeb5909ea23d
+  branch: v2.1.0.beta2b_qa
   specs:
     hyrax (2.1.0.beta2)
       active-fedora (~> 11.5, >= 11.5.2)
@@ -121,11 +121,11 @@ GEM
       io-like (~> 0.3.0)
     arel (8.0.0)
     ast (2.4.0)
-    autoprefixer-rails (8.2.0)
+    autoprefixer-rails (8.3.0)
       execjs
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
-    aws-partitions (1.78.0)
+    aws-partitions (1.80.0)
     aws-sdk-core (3.19.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
@@ -238,7 +238,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
-    crass (1.0.3)
+    crass (1.0.4)
     daemons (1.2.6)
     database_cleaner (1.6.2)
     debug_inspector (0.0.3)
@@ -315,19 +315,19 @@ GEM
       activesupport (>= 4.0)
     flot-rails (0.0.7)
       jquery-rails
-    font-awesome-rails (4.7.0.3)
-      railties (>= 3.2, < 5.2)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    google-api-client (0.19.8)
+    google-api-client (0.20.1)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.5, < 0.7.0)
       httpclient (>= 2.8.1, < 3.0)
       mime-types (~> 3.0)
       representable (~> 3.0)
       retriable (>= 2.0, < 4.0)
-    google_drive (2.1.9)
-      google-api-client (>= 0.11.0, < 0.20.0)
+    google_drive (2.1.3)
+      google-api-client (>= 0.11.0, < 1.0.0)
       googleauth (>= 0.5.0, < 1.0.0)
       nokogiri (>= 1.5.3, < 2.0.0)
     googleauth (0.6.2)
@@ -784,7 +784,7 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    tinymce-rails (4.7.9)
+    tinymce-rails (4.7.11)
       railties (>= 3.1.1)
     turbolinks (5.1.0)
       turbolinks-source (~> 5.1)
