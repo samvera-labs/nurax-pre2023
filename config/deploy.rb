@@ -21,7 +21,11 @@ set :branch, ENV['REVISION'] || ENV['BRANCH'] || 'master'
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/analytics.yml", "config/browse_everything_providers.yml"
+append :linked_files, "config/analytics.yml"
+append :linked_files, "config/browse_everything_providers.yml"
+append :linked_files, "config/database.yml"
+append :linked_files, "config/secrets.yml"
+append :linked_files, ".env.production"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
