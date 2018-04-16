@@ -2,10 +2,10 @@
 lock "3.9.0"
 
 set :application, "nurax"
-set :repo_url, "git@github.com:curationexperts/nurax.git"
+set :repo_url, "https://github.com/curationexperts/nurax.git"
 
 # Default branch is :master
-set :branch, ENV['REVISION'] || ENV['BRANCH'] || 'master'
+set :branch, ENV['REVISION'] || ENV['BRANCH'] || ENV['BRANCH_NAME'] || 'master'
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
