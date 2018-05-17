@@ -27,6 +27,7 @@ development:
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
+    - kallen2@library.ucla.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -57,6 +58,7 @@ production:
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
+    - kallen2@library.ucla.edu
 test:
   archivist:
     - archivist1@example.com
