@@ -1,3 +1,56 @@
+GIT
+  remote: https://github.com/samvera/hyrax.git
+  revision: bd659185daa7d5bd1a49ec766a13242945dc0ccd
+  branch: v2.1.0.rc3_qa
+  specs:
+    hyrax (2.1.0.rc3)
+      active-fedora (~> 11.5, >= 11.5.2)
+      almond-rails (~> 0.1)
+      awesome_nested_set (~> 3.1)
+      blacklight (~> 6.14)
+      blacklight-gallery (~> 0.7)
+      breadcrumbs_on_rails (~> 3.0)
+      browse-everything (>= 0.10.5)
+      carrierwave (~> 1.0)
+      clipboard-rails (~> 1.5)
+      dry-equalizer (~> 0.2)
+      dry-struct (~> 0.1)
+      dry-validation (~> 0.9)
+      flipflop (~> 2.3)
+      flot-rails (~> 0.0.6)
+      font-awesome-rails (~> 4.2)
+      hydra-derivatives (~> 3.3)
+      hydra-editor (>= 3.3, < 5.0)
+      hydra-head (>= 10.5.0)
+      hydra-works (~> 0.16)
+      iiif_manifest (>= 0.3, < 0.5)
+      jquery-datatables-rails (~> 3.4)
+      jquery-ui-rails (~> 6.0)
+      json-schema
+      kaminari_route_prefix (~> 0.1.1)
+      legato (~> 0.3)
+      linkeddata
+      mailboxer (~> 0.12)
+      nest (~> 3.1)
+      noid-rails (~> 3.0.0)
+      oauth
+      oauth2 (~> 1.2)
+      posix-spawn
+      power_converter (~> 0.1, >= 0.1.2)
+      pul_uv_rails (~> 2.0)
+      qa (~> 2.0)
+      rails (~> 5.0)
+      rails_autolink (~> 1.1)
+      rdf-rdfxml
+      redis-namespace (~> 1.5)
+      redlock (>= 0.1.2)
+      retriable (>= 2.9, < 4.0)
+      samvera-nesting_indexer (~> 2.0)
+      select2-rails (~> 3.5)
+      signet
+      simple_form (~> 3.2, <= 3.5.0)
+      tinymce-rails (~> 4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,16 +125,18 @@ GEM
       execjs
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
+    aws-eventstream (1.0.0)
     aws-partitions (1.87.0)
-    aws-sdk-core (3.20.2)
+    aws-sdk-core (3.21.2)
+      aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
     aws-sdk-kms (1.5.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.10.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-s3 (1.13.0)
+      aws-sdk-core (~> 3, >= 3.21.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.2)
@@ -184,7 +239,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    connection_pool (2.2.1)
+    connection_pool (2.2.2)
     crass (1.0.4)
     daemons (1.2.6)
     database_cleaner (1.6.2)
@@ -266,7 +321,7 @@ GEM
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    google-api-client (0.21.1)
+    google-api-client (0.21.2)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.5, < 0.7.0)
       httpclient (>= 2.8.1, < 3.0)
@@ -315,7 +370,7 @@ GEM
       deprecation
       mime-types (> 2.0, < 4.0)
       mini_magick (>= 3.2, < 5)
-    hydra-editor (4.0.1)
+    hydra-editor (4.0.2)
       active-fedora (>= 9.0.0)
       almond-rails (~> 0.1)
       cancancan (~> 1.8)
@@ -336,53 +391,6 @@ GEM
       hydra-file_characterization (~> 0.3, >= 0.3.3)
       hydra-pcdm (>= 0.9)
       om (~> 3.1)
-    hyrax (2.1.0.rc3)
-      active-fedora (~> 11.5, >= 11.5.2)
-      almond-rails (~> 0.1)
-      awesome_nested_set (~> 3.1)
-      blacklight (~> 6.14)
-      blacklight-gallery (~> 0.7)
-      breadcrumbs_on_rails (~> 3.0)
-      browse-everything (>= 0.10.5)
-      carrierwave (~> 1.0)
-      clipboard-rails (~> 1.5)
-      dry-equalizer (~> 0.2)
-      dry-struct (~> 0.1)
-      dry-validation (~> 0.9)
-      flipflop (~> 2.3)
-      flot-rails (~> 0.0.6)
-      font-awesome-rails (~> 4.2)
-      hydra-derivatives (~> 3.3)
-      hydra-editor (>= 3.3, < 5.0)
-      hydra-head (>= 10.5.0)
-      hydra-works (~> 0.16)
-      iiif_manifest (>= 0.3, < 0.5)
-      jquery-datatables-rails (~> 3.4)
-      jquery-ui-rails (~> 6.0)
-      json-schema
-      kaminari_route_prefix (~> 0.1.1)
-      legato (~> 0.3)
-      linkeddata
-      mailboxer (~> 0.12)
-      nest (~> 3.1)
-      noid-rails (~> 3.0.0)
-      oauth
-      oauth2 (~> 1.2)
-      posix-spawn
-      power_converter (~> 0.1, >= 0.1.2)
-      pul_uv_rails (~> 2.0)
-      qa (~> 2.0)
-      rails (~> 5.0)
-      rails_autolink (~> 1.1)
-      rdf-rdfxml
-      redis-namespace (~> 1.5)
-      redlock (>= 0.1.2)
-      retriable (>= 2.9, < 4.0)
-      samvera-nesting_indexer (~> 2.0)
-      select2-rails (~> 3.5)
-      signet
-      simple_form (~> 3.2, <= 3.5.0)
-      tinymce-rails (~> 4.1)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
@@ -778,7 +786,7 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    tinymce-rails (4.7.12)
+    tinymce-rails (4.7.13)
       railties (>= 3.1.1)
     turbolinks (5.1.0)
       turbolinks-source (~> 5.1)
@@ -831,7 +839,7 @@ DEPENDENCIES
   factory_girl_rails
   fcrepo_wrapper
   honeybadger (~> 3.1)
-  hyrax (= 2.1.0.rc3)
+  hyrax!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5, < 3.2)
