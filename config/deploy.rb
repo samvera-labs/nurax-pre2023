@@ -3,6 +3,9 @@ lock "3.9.0"
 
 set :application, "nurax"
 set :repo_url, "https://github.com/curationexperts/nurax.git"
+set :deploy_to, '/opt/nurax'
+set :rails_env, 'production'
+set :ssh_options, keys: ['nurax-dev-deploy_rsa'] if File.exist?('nurax-dev-deploy_rsa')
 
 # Default branch is :master
 set :branch, ENV['REVISION'] || ENV['BRANCH'] || ENV['BRANCH_NAME'] || 'master'
@@ -59,6 +62,17 @@ namespace :sidekiq do
   task :restart do
     on roles(:app) do
       execute :sudo, :systemctl, :restart, :sidekiq
+    end
+  end
+end
+
+# Capistrano passenger restart isn't working consistently,
+# so restart apache2 after a successful deploy, to ensure
+# changes are picked up.
+namespace :deploy do
+  after :finishing, :restart_apache do
+    on roles(:app) do
+      execute :sudo, :systemctl, :restart, :apache2
     end
   end
 end
