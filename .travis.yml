@@ -23,7 +23,7 @@ before_install:
   http://localhost &
 after_success:
 - |
-  if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
+  if [[ $TRAVIS_BRANCH == 'bundler_auto_update' && $TRAVIS_PULL_REQUEST == 'true' ]]; then
     openssl aes-256-cbc -K $encrypted_a9d30a8f0000_key -iv $encrypted_a9d30a8f0000_iv -in nurax-dev-deploy_rsa.enc -out nurax-dev-deploy_rsa -d
     bundle update hyrax
     git commit -a -m "Updating hyrax to latest SHA"
