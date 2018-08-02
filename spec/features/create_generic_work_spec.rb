@@ -5,7 +5,7 @@ require 'rails_helper'
 # NOTE: If you generated more than one work, you have to set "js: true"
 RSpec.feature 'Create a GenericWork', :clean, js: true do
   context 'a logged in user' do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
 
     before do
       AdminSet.find_or_create_default_admin_set_id
