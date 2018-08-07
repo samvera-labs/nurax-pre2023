@@ -5,16 +5,16 @@
 ---
 # file_system:
 #  :home: "/tmp"
-dropbox:
-  :app_key: <%= ENV['DROPBOX_APP_KEY'] %>
-  :app_secret: <%= ENV['DROPBOX_APP_SECRET'] %>
+# dropbox:
+#   :app_key: <%= ENV['DROPBOX_APP_KEY'] %>
+#   :app_secret: <%= ENV['DROPBOX_APP_SECRET'] %>
 box:
-  :client_id: <%= ENV['BOX_CLIENT_ID'] %>
-  :client_secret: <%= ENV['BOX_CLIENT_SECRET'] %>
+  :client_id: <%= ENV['BOX_OAUTH_CLIENT_ID'] %>
+  :client_secret: <%= ENV['BOX_OAUTH_CLIENT_SECRET'] %>
   :max_upload_file_size: <%= ENV['BOX_MAX_SIZE'] %>
-google_drive:
-  :client_id: <%= ENV['GOOGLE_API_CLIENT_ID'] %>
-  :client_secret: <%= ENV['GOOGLE_API_CLIENT_SECRET'] %>
+# google_drive:
+#   :client_id: <%= ENV['GOOGLE_API_CLIENT_ID'] %>
+#   :client_secret: <%= ENV['GOOGLE_API_CLIENT_SECRET'] %>
 # s3:
 #   :bucket: YOUR_AWS_S3_BUCKET
 #   :response_type: :signed_url # set to :public_url for public urls or :s3_uri for an s3://BUCKET/KEY uri
