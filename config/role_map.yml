@@ -41,7 +41,6 @@ production:
     - rkati@email.unc.edu
     - jrc88@cornell.edu
     - elr37@cornell.edu
-    - shanita@curationexperts.com
     - bess@curationexperts.com
     - mark@curationexperts.com
     - tom@curationexperts.com
@@ -59,6 +58,7 @@ production:
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
     - kallen2@library.ucla.edu
+    - mcwhitak@iu.edu
 test:
   archivist:
     - archivist1@example.com
