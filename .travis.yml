@@ -21,9 +21,6 @@ before_install:
 - gem install bundler
 - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9222
   http://localhost &
-after_success:
-  - openssl aes-256-cbc -K $encrypted_a9d30a8f0000_key -iv $encrypted_a9d30a8f0000_iv -in nurax-dev-deploy_rsa.enc -out nurax-dev-deploy_rsa -d
-  - bundle exec cap nurax-dev deploy
 jdk:
 - oraclejdk8
 env:
