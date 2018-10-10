@@ -28,6 +28,7 @@ development:
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
     - kallen2@library.ucla.edu
+    - rgjoshe@csufresno.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -59,6 +60,7 @@ production:
     - lrobins5@nd.edu
     - kallen2@library.ucla.edu
     - mcwhitak@iu.edu
+    - rgjoshe@csufresno.edu
 test:
   archivist:
     - archivist1@example.com
