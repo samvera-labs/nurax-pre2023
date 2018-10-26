@@ -29,6 +29,7 @@ development:
     - lrobins5@nd.edu
     - kallen2@library.ucla.edu
     - rgjoshe@csufresno.edu
+    - mutugi.gathuri@gmail.com
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -61,6 +62,7 @@ production:
     - kallen2@library.ucla.edu
     - mcwhitak@iu.edu
     - rgjoshe@csufresno.edu
+    - mutugi.gathuri@gmail.com
 test:
   archivist:
     - archivist1@example.com
