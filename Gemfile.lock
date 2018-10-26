@@ -104,7 +104,7 @@ GEM
       activemodel (= 5.1.6)
       activesupport (= 5.1.6)
       arel (~> 8.0)
-    activerecord-import (0.25.0)
+    activerecord-import (0.27.0)
       activerecord (>= 3.2)
     activesupport (5.1.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -395,7 +395,7 @@ GEM
       hydra-file_characterization (~> 0.3, >= 0.3.3)
       hydra-pcdm (>= 0.9)
       om (~> 3.1)
-    i18n (1.1.0)
+    i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     iiif_manifest (0.4.0)
@@ -491,7 +491,7 @@ GEM
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.7.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
     mailboxer (0.15.1)
       carrierwave (>= 0.5.8)
@@ -520,7 +520,7 @@ GEM
     noid-rails (3.0.0)
       actionpack (>= 5.0.0, < 6)
       noid (~> 0.9)
-    nokogiri (1.8.4)
+    nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     nokogumbo (1.5.0)
       nokogiri
@@ -550,7 +550,7 @@ GEM
     public_suffix (3.0.3)
     pul_uv_rails (2.0.1)
     puma (3.12.0)
-    qa (2.1.0)
+    qa (2.1.2)
       activerecord-import
       deprecation
       faraday
@@ -592,7 +592,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rdf (3.0.2)
+    rdf (3.0.5)
       hamster (~> 3.0)
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (2.2.1)
@@ -864,4 +864,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.2
+   1.16.4
