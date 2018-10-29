@@ -698,7 +698,7 @@ GEM
       multipart-post
       oauth2
     ruby-progressbar (1.10.0)
-    rubyzip (1.2.1)
+    rubyzip (1.2.2)
     samvera-nesting_indexer (2.0.0)
       dry-equalizer
     sass (3.5.7)
@@ -852,6 +852,7 @@ DEPENDENCIES
   riiif (~> 1.1)
   rsolr (~> 2.0)
   rspec-rails
+  rubyzip (>= 1.2.2)
   sass-rails (~> 5.0)
   selenium-webdriver
   sidekiq
