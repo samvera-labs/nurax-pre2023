@@ -25,7 +25,8 @@ today = Time.now.strftime('%Y-%m-%e-%H-%M')
 `cd /home/ubuntu/nurax; bundle update hyrax`
 `cd /home/ubuntu/nurax; git commit -a -m 'Daily update for "#{today}"'; git push --set-upstream origin #{today}`
 `cd /home/ubuntu/nurax; BRANCH_NAME="#{today}" cap nurax-dev deploy`
-`cd /home/ubuntu/nurax; git checkout master; git branch -d "#{today}"; git push origin --delete "${today}"`
+`cd /home/ubuntu/nurax; git checkout master; git push origin --delete "#{today}"`
+`cd /home/ubuntu/nurax; git checkout master; git branch -D "#{today}"`
 ```
 
 ## Questions
