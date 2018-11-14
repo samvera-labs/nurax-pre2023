@@ -23,13 +23,14 @@ development:
     - eporter@emory.edu
     - naw4t@virginia.edu
     - saidulla@iu.edu
-    - adam.arling@northwestern.edu 
+    - adam.arling@northwestern.edu
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
     - kallen2@library.ucla.edu
     - rgjoshe@csufresno.edu
     - mutugi.gathuri@gmail.com
+    - srsridh@iu.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -55,7 +56,7 @@ production:
     - eporter@emory.edu
     - naw4t@virginia.edu
     - saidulla@iu.edu
-    - adam.arling@northwestern.edu 
+    - adam.arling@northwestern.edu
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
@@ -63,6 +64,7 @@ production:
     - mcwhitak@iu.edu
     - rgjoshe@csufresno.edu
     - mutugi.gathuri@gmail.com
+    - srsridh@iu.edu
 test:
   archivist:
     - archivist1@example.com
