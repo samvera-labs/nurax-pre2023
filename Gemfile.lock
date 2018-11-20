@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/samvera/hyrax.git
-  revision: 36a862f02fbb555ab444a199291b11334763082d
+  revision: 892c70712350a5583a51ad4c5cfec000d07b75de
   branch: master
   specs:
-    hyrax (2.4.0)
+    hyrax (3.0.0.pre.beta1)
       active-fedora (~> 11.5, >= 11.5.2)
       almond-rails (~> 0.1)
       awesome_nested_set (~> 3.1)
@@ -127,7 +127,7 @@ GEM
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
     aws-eventstream (1.0.1)
-    aws-partitions (1.111.0)
+    aws-partitions (1.114.0)
     aws-sdk-core (3.38.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
@@ -136,8 +136,8 @@ GEM
     aws-sdk-kms (1.11.0)
       aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.23.1)
-      aws-sdk-core (~> 3, >= 3.26.0)
+    aws-sdk-s3 (1.24.1)
+      aws-sdk-core (~> 3, >= 3.37.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.3)
@@ -568,7 +568,7 @@ GEM
     public_suffix (3.0.3)
     pul_uv_rails (2.0.1)
     puma (3.12.0)
-    qa (2.1.2)
+    qa (2.2.0)
       activerecord-import
       deprecation
       faraday
