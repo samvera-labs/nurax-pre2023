@@ -31,6 +31,7 @@ development:
     - rgjoshe@csufresno.edu
     - mutugi.gathuri@gmail.com
     - srsridh@iu.edu
+    - cam156@psu.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -65,6 +66,7 @@ production:
     - rgjoshe@csufresno.edu
     - mutugi.gathuri@gmail.com
     - srsridh@iu.edu
+    - cam156@psu.edu
 test:
   archivist:
     - archivist1@example.com
