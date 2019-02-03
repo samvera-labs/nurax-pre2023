@@ -5,7 +5,7 @@ set -e
 SOLR_HOST=$(echo $SOLR_URL | cut -d '/' -f 1,2,3)
 
 # Upload the hyrax SOLR configurations
-curl --retry 3 --retry-delay 5 --retry-connrefused -H "Content-type:application/octet-stream" --data-binary @config/solr/config.zip "${SOLR_HOST}/solr/admin/configs?action=UPLOAD&name=hyrax"
+curl --retry 3 --retry-delay 5 --retry-connrefused -H "Content-type:application/octet-stream" --data-binary @solr/config.zip "${SOLR_HOST}/solr/admin/configs?action=UPLOAD&name=hyrax"
 
 # SOLR 7.x URL to check cluster status
 # Check if the target solr collection exists, create it unless a "200" is returned

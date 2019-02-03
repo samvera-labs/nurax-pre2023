@@ -37,9 +37,9 @@ services:
     environment:
       - FEDORA_URL=http://fcrepo-dev:8080/fcrepo/rest
       - FITS_PATH=/opt/fits-1.0.5/fits.sh
-      - RAILS_ENV=nurax_development
+      - RAILS_ENV=development
       - RAILS_LOG_TO_STDOUT=true
-      - DB_NAME=postgres
+      - DB_NAME=development
       - DB_HOSTNAME=db-dev
       - DB_PASSWORD=postgres
       - DB_PORT='5432'
@@ -81,7 +81,7 @@ services:
       - FEDORA_URL=http://fcrepo-test:8080/fcrepo/rest
       - FITS_PATH=/opt/fits-1.0.5/fits.sh
       - RAILS_ENV=test
-      - DB_NAME=nurax_test
+      - DB_NAME=test
       - DB_HOSTNAME=db-dev
       - DB_PASSWORD=postgres
       - DB_PORT='5432'
@@ -150,13 +150,13 @@ services:
   db-dev:
     <<: *db
     environment:
-      - POSTGRES_DB=nurax_development
+      - POSTGRES_DB=development
     volumes:
       - db-dev:/var/lib/postgresql/data
   db-test:
     <<: *db
     environment:
-      - POSTGRES_DB=nurax_test
+      - POSTGRES_DB=test
     tmpfs: /var/lib/postgresql/data
 
   ##
