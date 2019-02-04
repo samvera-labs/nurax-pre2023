@@ -1,10 +1,9 @@
 #!/bin/sh
 set -e
 
-# Allow production or staging environment to run the script, manually during cluster creation
 SOLR_HOST=$(echo $SOLR_URL | cut -d '/' -f 1,2,3)
 
-# Upload the hyrax SOLR configurations
+# Upload the existing hyrax SOLR configurations from solr/config.zip
 curl --retry 3 --retry-delay 5 --retry-connrefused -H "Content-type:application/octet-stream" --data-binary @solr/config.zip "${SOLR_HOST}/solr/admin/configs?action=UPLOAD&name=hyrax"
 
 # SOLR 7.x URL to check cluster status

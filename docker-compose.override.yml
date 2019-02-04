@@ -7,7 +7,7 @@
 version: '3'
 
 services:
-  # Map the application and debugging port to localhost
+  # Map the application port to localhost
   server:
     ports:
       - 3000:3000

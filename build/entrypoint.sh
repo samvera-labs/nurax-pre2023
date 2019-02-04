@@ -2,7 +2,10 @@
 
 echo "Building ${RAILS_ENV}"
 
-rm -f tmp/pids/puma.pid
+# Remove previous servers pid
+rm -f tmp/puma.pid
+
+# Guarantee gems are installed in case docker image is outdated
 ./build/install_gems.sh
 
 # Do not auto-create SOLR or Migrations for production or staging environments
