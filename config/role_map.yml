@@ -10,7 +10,6 @@ development:
     - rkati@email.unc.edu
     - jrc88@cornell.edu
     - elr37@cornell.edu
-    - shanita@curationexperts.com
     - bess@curationexperts.com
     - mark@curationexperts.com
     - tom@curationexperts.com
@@ -35,6 +34,7 @@ development:
     - karen.didrickson@northwestern.edu
     - morganem@email.unc.edu
     - ebrassel@email.unc.edu
+    - sarah.imholt@oregonstate.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -73,6 +73,7 @@ production:
     - karen.didrickson@northwestern.edu
     - morganem@email.unc.edu
     - ebrassel@email.unc.edu
+    - sarah.imholt@oregonstate.edu
 test:
   archivist:
     - archivist1@example.com
