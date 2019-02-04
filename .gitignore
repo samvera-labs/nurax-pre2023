@@ -16,6 +16,10 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+!/tmp/derivatives/.keep
+!/tmp/uploads/.keep
+!/tmp/uploads/cache/.keep
+
 
 # From Rails 5.1
 /node_modules
