@@ -18,8 +18,16 @@ RUN gem install bundler
 RUN apt-get update && apt-get upgrade -y && \
   apt-get install --no-install-recommends -y ca-certificates nodejs yarn \
   build-essential libpq-dev libreoffice imagemagick unzip ghostscript vim \
-  clamav clamav-daemon libclamav-dev \
+  clamav-freshclam clamav-daemon libclamav-dev \
   qt5-default libqt5webkit5-dev xvfb xauth openjdk-8-jre --fix-missing --allow-unauthenticated
+
+# fetch clamav local database
+# initial update of av databases
+RUN mkdir -p /var/lib/clamav && \
+  wget -O /var/lib/clamav/main.cvd http://database.clamav.net/main.cvd && \
+  wget -O /var/lib/clamav/daily.cvd http://database.clamav.net/daily.cvd && \
+  wget -O /var/lib/clamav/bytecode.cvd http://database.clamav.net/bytecode.cvd && \
+  chown clamav:clamav /var/lib/clamav/*.cvd
 
 # install FITS for file characterization
 RUN mkdir -p /opt/fits && \

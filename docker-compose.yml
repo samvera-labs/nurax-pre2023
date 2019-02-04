@@ -40,7 +40,7 @@ services:
       - RAILS_ENV=development
       - RAILS_LOG_TO_STDOUT=true
       - DB_NAME=development
-      - DB_HOSTNAME=db-dev
+      - DB_HOST=db-dev
       - DB_PASSWORD=postgres
       - DB_PORT='5432'
       - DB_USERNAME=postgres
@@ -61,8 +61,7 @@ services:
     <<: *dev
     command: >
       bash -c "./build/entrypoint.sh &&
-      bundle exec puma -C config/puma/development.rb --dir /data --pidfile /data/tmp/pids/puma.pid -b tcp://0.0.0.0:3000 &&
-      tail -f log/development.log"
+      bundle exec puma --dir /data --pidfile /data/tmp/puma.pid -b tcp://0.0.0.0:3000"
   workers:
     <<: *dev
     command: bash -c "./build/install_gems.sh && bundle exec sidekiq"
@@ -82,7 +81,7 @@ services:
       - FITS_PATH=/opt/fits-1.0.5/fits.sh
       - RAILS_ENV=test
       - DB_NAME=test
-      - DB_HOSTNAME=db-dev
+      - DB_HOST=db-dev
       - DB_PASSWORD=postgres
       - DB_PORT='5432'
       - DB_USERNAME=postgres
@@ -102,8 +101,7 @@ services:
       - bundled:/usr/local/bundle
     command: >
       bash -c "./build/entrypoint.sh &&
-      puma -b tcp://0.0.0.0:3001 -e test -d &&
-      tail -f log/test.log"
+      puma -b tcp://0.0.0.0:3001 -e test"
     expose:
       - 3001
 
