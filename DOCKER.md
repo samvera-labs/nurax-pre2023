@@ -2,7 +2,7 @@
 
 ## Requirements
 
-The details provided assume that the official Docker daemon is running in the background. Download and install Docker Community Edition from https://www.docker.com/community-edition.
+The details provided assume that the official Docker daemon is running in the background. Download and install Docker Community Edition from https://www.docker.com/community-edition, and `docker-compose` from https://docs.docker.com/compose/install/.
 
 ## Docker notes
 
@@ -40,7 +40,11 @@ On the first time building and starting the server, Hyrax defaults must be creat
 
 Visit http://localhost:3000/users/sign_up?locale=en to register an account.
 
-Add the registered email address to the `admin` users in `config/role_map.yml` and restart the server.
+### Making edits to application code
+
+_Docker has mounted the Nurax code directory inside the container at `/data`, edits made directly to these files are reflected within the running container. As is the case with some application code, an application restart might be necessary for the system to reflect those changes._
+
+Make yourself an admin user by adding the registered email address to the `admin` users in `config/role_map.yml`, then restart the server.
 
     docker-compose down
     ... wait for the services to stop ...
@@ -63,7 +67,8 @@ _Open another terminal window (unless you run the previous command `detached`)_
 Start a session, and run `rspec` on the test (application) container. _(This method offers a more developer/TDD friendly experience)_
 
     docker-compose run test bash
-    root@8675309jenny:/data# bundle exec rspec
+    ... wait for a shell session to start ...
+    bundle exec rspec
 
 **OR** run `rspec` on the test (application) container directly:
 
