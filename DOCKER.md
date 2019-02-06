@@ -10,6 +10,19 @@ The details provided assume that the official Docker daemon is running in the ba
 - `$ docker volume ls` : Show a list of named volumes which hold persistent data for containers.
 - `$ docker volume rm [VOLUME NAME]` : Remove a named volume, to force the system to rebuild and start that services persistent data from scratch.
 
+## Running the application as a non-root user
+
+Typically an ENV variable is set with your current user id (UID), verify it's set and matching your current shell.
+
+    echo $UID
+    # 501
+    id -u
+    # 501
+
+If your UID isn't set, it's recommended that you set it anytime you're running `docker-compose` so that the application container will run in the context of your current user.
+
+    UID=$(id -u) docker-compose ...
+
 ## Docker Compose basics
 
 ### Build the base application container

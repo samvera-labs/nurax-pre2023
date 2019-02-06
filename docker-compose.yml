@@ -7,7 +7,7 @@ networks:
 volumes:
   db-dev:
   fcrepo-dev:
-  solr-dev:
+  solr:
   redis-dev:
   bundled:
 
@@ -18,6 +18,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    user: $UID
     volumes:
       - .:/data # mount current directory into the image
       - bundled:/usr/local/bundle
@@ -115,17 +116,27 @@ services:
   # SOLR Index server
   solr: &solr
     image: solr:6-alpine
-    command: /opt/solr/bin/solr -cloud -noprompt -f -p 8983
     expose:
       - 8983
     networks:
       internal:
+    volumes:
+      - ./solr/config:/opt/solr/nurax_conf
+      - solr:/opt/solr/server/mycores
   solr-dev:
     <<: *solr
-    volumes:
-      - solr-dev:/opt/solr/server/solr
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - development
+      - /opt/solr/nurax_conf
   solr-test:
     <<: *solr
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - test
+      - /opt/solr/nurax_conf
 
   ##
   # Fedora repository server
