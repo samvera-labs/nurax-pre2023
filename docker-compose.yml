@@ -7,7 +7,7 @@ networks:
 volumes:
   db-dev:
   fcrepo-dev:
-  solr:
+  solr-dev:
   redis-dev:
   bundled:
 
@@ -120,11 +120,11 @@ services:
       - 8983
     networks:
       internal:
-    volumes:
-      - ./solr/config:/opt/solr/nurax_conf
-      - solr:/opt/solr/server/mycores
   solr-dev:
     <<: *solr
+    volumes:
+      - ./solr/config:/opt/solr/nurax_conf
+      - solr-dev:/opt/solr/server/solr/mycores
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
@@ -132,6 +132,8 @@ services:
       - /opt/solr/nurax_conf
   solr-test:
     <<: *solr
+    volumes:
+      - ./solr/config:/opt/solr/nurax_conf
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
