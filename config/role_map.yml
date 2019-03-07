@@ -43,7 +43,6 @@ production:
     - chris-diaz@northwestern.edu
     - shlake@virginia.edu
     - hparekh@nd.edu
-    - shanita@curationexperts.com
     - gamontoya@ucsd.edu
     - rkati@email.unc.edu
     - jrc88@cornell.edu
@@ -74,6 +73,7 @@ production:
     - morganem@email.unc.edu
     - ebrassel@email.unc.edu
     - sarah.imholt@oregonstate.edu
+    - jlhardes@iu.edu
 test:
   archivist:
     - archivist1@example.com
