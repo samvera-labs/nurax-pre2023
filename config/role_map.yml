@@ -10,7 +10,6 @@ development:
     - rkati@email.unc.edu
     - jrc88@cornell.edu
     - elr37@cornell.edu
-    - shanita@curationexperts.com
     - bess@curationexperts.com
     - mark@curationexperts.com
     - tom@curationexperts.com
@@ -23,11 +22,19 @@ development:
     - eporter@emory.edu
     - naw4t@virginia.edu
     - saidulla@iu.edu
-    - adam.arling@northwestern.edu 
+    - adam.arling@northwestern.edu
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
     - kallen2@library.ucla.edu
+    - rgjoshe@csufresno.edu
+    - mutugi.gathuri@gmail.com
+    - srsridh@iu.edu
+    - cam156@psu.edu
+    - karen.didrickson@northwestern.edu
+    - morganem@email.unc.edu
+    - ebrassel@email.unc.edu
+    - sarah.imholt@oregonstate.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -36,12 +43,10 @@ production:
     - chris-diaz@northwestern.edu
     - shlake@virginia.edu
     - hparekh@nd.edu
-    - shanita@curationexperts.com
     - gamontoya@ucsd.edu
     - rkati@email.unc.edu
     - jrc88@cornell.edu
     - elr37@cornell.edu
-    - shanita@curationexperts.com
     - bess@curationexperts.com
     - mark@curationexperts.com
     - tom@curationexperts.com
@@ -54,11 +59,21 @@ production:
     - eporter@emory.edu
     - naw4t@virginia.edu
     - saidulla@iu.edu
-    - adam.arling@northwestern.edu 
+    - adam.arling@northwestern.edu
     - moira.downey@duke.edu
     - nikdragovic@gmail.com
     - lrobins5@nd.edu
     - kallen2@library.ucla.edu
+    - mcwhitak@iu.edu
+    - rgjoshe@csufresno.edu
+    - mutugi.gathuri@gmail.com
+    - srsridh@iu.edu
+    - cam156@psu.edu
+    - karen.didrickson@northwestern.edu
+    - morganem@email.unc.edu
+    - ebrassel@email.unc.edu
+    - sarah.imholt@oregonstate.edu
+    - jlhardes@iu.edu
 test:
   archivist:
     - archivist1@example.com
