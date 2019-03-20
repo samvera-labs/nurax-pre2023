@@ -1,12 +1,12 @@
 sudo: false
 dist: trusty
-language: ruby
 addons:
-  chrome: stable
   apt:
     packages:
     - libclamav-dev
     - clamav
+    - chromium-browser
+    - chromium-chromedriver
 cache:
 - bundler: true
 services:
@@ -15,12 +15,12 @@ services:
 rvm:
 - 2.4.2
 before_script:
-- bundle exec rake db:create
+  - bundle exec rake db:create
+  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/bin/chromedriver"
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_install:
 - gem update --system
 - gem install bundler
-- google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9222
-  http://localhost &
 jdk:
 - oraclejdk8
 env:

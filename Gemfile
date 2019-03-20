@@ -43,7 +43,6 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-sidekiq'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
   gem 'solr_wrapper', '>= 0.3'
   gem 'fcrepo_wrapper'
   gem 'rspec-rails'
