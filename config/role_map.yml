@@ -74,6 +74,8 @@ production:
     - ebrassel@email.unc.edu
     - sarah.imholt@oregonstate.edu
     - jlhardes@iu.edu
+    - kelly@notch8.com
+    - jp@notch8.com
 test:
   archivist:
     - archivist1@example.com
