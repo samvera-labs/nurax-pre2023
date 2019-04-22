@@ -76,6 +76,7 @@ production:
     - jlhardes@iu.edu
     - kelly@notch8.com
     - jp@notch8.com
+    - shana@notch8.com
 test:
   archivist:
     - archivist1@example.com
