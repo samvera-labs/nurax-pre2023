@@ -77,6 +77,7 @@ production:
     - kelly@notch8.com
     - jp@notch8.com
     - shana@notch8.com
+    - phil.suda@wustl.edu
 test:
   archivist:
     - archivist1@example.com
