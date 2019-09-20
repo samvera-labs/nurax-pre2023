@@ -738,6 +738,10 @@ GEM
     simple_form (3.5.0)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
+    skylight (2.0.1)
+      skylight-core (= 2.0.1)
+    skylight-core (2.0.1)
+      activesupport (>= 4.2.0)
     slop (4.6.2)
     solr_wrapper (2.0.0)
       faraday
@@ -856,6 +860,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   sidekiq
+  skylight (~> 2.0)
   solr_wrapper (>= 0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
