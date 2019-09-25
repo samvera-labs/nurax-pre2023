@@ -557,7 +557,7 @@ GEM
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
-    pg (0.21.0)
+    pg (1.1.4)
     posix-spawn (0.3.13)
     power_converter (0.1.2)
     powerpack (0.1.2)
@@ -868,7 +868,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5, < 3.2)
-  pg (~> 0.18)
+  pg
   puma (~> 3.7)
   rails (~> 5.1.6)
   riiif (~> 2.0)
