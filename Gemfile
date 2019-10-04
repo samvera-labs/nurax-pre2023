@@ -76,7 +76,7 @@ gem 'devise-i18n'
 gem 'devise-guests', '~> 0.6'
 gem 'rsolr', '~> 2.0'
 gem 'jquery-rails'
-gem 'clamav'
+# gem 'clamav' # Removing clamav temporarily because the gem won't build on nurax-dev system
 gem 'sidekiq'
 
 gem 'riiif', '~> 2.0'

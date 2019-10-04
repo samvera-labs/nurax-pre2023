@@ -231,7 +231,6 @@ GEM
       mime-types (>= 1.16)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    clamav (0.4.1)
     clipboard-rails (1.7.1)
     coderay (1.1.2)
     coffee-rails (4.2.2)
@@ -894,7 +893,6 @@ DEPENDENCIES
   capistrano-rails
   capistrano-sidekiq
   capybara (~> 2.13)
-  clamav
   coffee-rails (~> 4.2)
   database_cleaner
   devise
