@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  # To display stack traces in production, you want 
+  # To display stack traces in production, you want
   # config.consider_all_requests_local       = true
   # To hide stack traces in production, set this to false.
   config.consider_all_requests_local       = true
@@ -32,7 +32,7 @@ Rails.application.configure do
   config.public_file_server.enabled = true
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
