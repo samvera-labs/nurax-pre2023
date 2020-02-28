@@ -592,7 +592,7 @@ GEM
     power_converter (0.1.2)
     powerpack (0.1.2)
     public_suffix (4.0.1)
-    puma (3.12.2)
+    puma (3.12.3)
     qa (3.0.0)
       activerecord-import
       deprecation
