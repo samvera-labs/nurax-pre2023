@@ -79,6 +79,8 @@ production:
     - shana@notch8.com
     - phil.suda@wustl.edu
     - njaffer@umich.edu
+    - amyhodge@stanford.edu
+    - hfrost@stanford.edu
 test:
   archivist:
     - archivist1@example.com
