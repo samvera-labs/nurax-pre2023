@@ -81,6 +81,7 @@ production:
     - njaffer@umich.edu
     - amyhodge@stanford.edu
     - hfrost@stanford.edu
+    - astridu@stanford.edu
 test:
   archivist:
     - archivist1@example.com
