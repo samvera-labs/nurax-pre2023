@@ -35,6 +35,7 @@ development:
     - morganem@email.unc.edu
     - ebrassel@email.unc.edu
     - sarah.imholt@oregonstate.edu
+    - scherztc@ucmail.uc.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -83,6 +84,7 @@ production:
     - hannah.frost@gmail.com
     - amyhodge@stanford.edu
     - astridu@stanford.edu
+    - scherztc@ucmail.uc.edu
 test:
   archivist:
     - archivist1@example.com
