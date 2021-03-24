@@ -85,6 +85,8 @@ production:
     - amyhodge@stanford.edu
     - astridu@stanford.edu
     - scherztc@ucmail.uc.edu
+    - crissmeyer@ucsb.edu
+    - gjanee@ucsb.edu
 test:
   archivist:
     - archivist1@example.com
