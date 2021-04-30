@@ -3,7 +3,7 @@
 # README
 
 This is an application used for testing the state of [Hyrax](https://github.com/samvera/hyrax). The `master` branch is pinned to Hyrax
-master, and is automatically deployed to [nurax-dev.curationexperts.com](https://nurax-dev.curationexperts.com) once per
+`main`, and is automatically deployed to [nurax-dev.curationexperts.com](https://nurax-dev.curationexperts.com) once per
 day. The `nurax-stable` branch is pinned to the latest stable release of Hyrax,
 and is deployed much less often, only when there has been a new release, to
 [nurax-stable.curationexperts.com](https://nurax-stable.curationexperts.com).
