@@ -7,7 +7,7 @@ set :deploy_to, '/opt/nurax'
 set :rails_env, 'production'
 set :ssh_options, keys: ['nurax-dev-deploy_rsa'] if File.exist?('nurax-dev-deploy_rsa')
 
-# Default branch is :master
+# Default branch is :main
 set :branch, ENV['REVISION'] || ENV['BRANCH'] || ENV['BRANCH_NAME'] || 'main'
 
 # Default deploy_to directory is /var/www/my_app_name
