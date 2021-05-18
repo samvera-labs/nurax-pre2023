@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/curationexperts/nurax.svg?branch=master)](https://travis-ci.org/curationexperts/nurax)
+[![CircleCI](https://circleci.com/gh/curationexperts/nurax.svg?style=svg)](https://circleci.com/gh/curationexperts/nurax)
 
 # README
 
-This is an application used for testing the state of [Hyrax](https://github.com/samvera/hyrax). The `master` branch is pinned to Hyrax
+This is an application used for testing the state of [Hyrax](https://github.com/samvera/hyrax). The `main` branch is pinned to Hyrax
 `main`, and is automatically deployed to [nurax-dev.curationexperts.com](https://nurax-dev.curationexperts.com) once per
 day. The `nurax-stable` branch is pinned to the latest stable release of Hyrax,
 and is deployed much less often, only when there has been a new release, to
@@ -23,18 +23,18 @@ There is a cron-job on `nurax-dev` running this script once per day:
 ```
 #!/usr/local/bin/ruby
 
-# Get the latest nurax master
+# Get the latest nurax main
 # Make a branch with today's date and update hyrax
 # Push and deploy that branch
 # Delete the branch
 
 today = Time.now.strftime('%Y-%m-%e-%H-%M')
-`cd /home/ubuntu/nurax; git checkout master; git pull; git checkout -b "#{today}"`
+`cd /home/ubuntu/nurax; git checkout main; git pull; git checkout -b "#{today}"`
 `cd /home/ubuntu/nurax; bundle update hyrax`
 `cd /home/ubuntu/nurax; git commit -a -m 'Daily update for "#{today}"'; git push --set-upstream origin #{today}`
 `cd /home/ubuntu/nurax; BRANCH_NAME="#{today}" cap nurax-dev deploy`
-`cd /home/ubuntu/nurax; git checkout master; git push origin --delete "#{today}"`
-`cd /home/ubuntu/nurax; git checkout master; git branch -D "#{today}"`
+`cd /home/ubuntu/nurax; git checkout main; git push origin --delete "#{today}"`
+`cd /home/ubuntu/nurax; git checkout main; git branch -D "#{today}"`
 ```
 
 ## Questions
