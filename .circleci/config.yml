@@ -34,8 +34,6 @@ jobs:
                 ruby_version: << parameters.ruby_version >>
                 bundler_version: << parameters.bundler_version >>
 
-            - samvera/rubocop
-
             - run:
                 name: Get yarn version
                 command: echo $(yarn --version) >> "YARN_VERSION"
