@@ -53,6 +53,7 @@ group :test do
   gem 'capybara', '~> 2.13'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do

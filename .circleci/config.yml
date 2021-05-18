@@ -1,0 +1,91 @@
+version: 2.1
+orbs:
+    samvera: samvera/circleci-orb@0.3.1
+jobs:
+    build:
+        parameters:
+            ruby_version:
+                type: string
+                default: 2.6.3
+            bundler_version:
+                type: string
+                default: 1.17.3
+        environment:
+          DATABASE_URL: postgresql://postgres@127.0.0.1/circle_test
+          DATABASE_NAME: circle_test
+          POSTGRES_DB: circle_test
+          DATABASE_USERNAME: postgres
+          POSTGRES_HOST: 127.0.0.1
+          POSTGRES_USER: postgres
+          WORKING_PATH: /tmp
+          UPLOAD_PATH: /tmp
+          CACHE_PATH: /tmp/cache
+          CIRCLE_FEDORA_URL: http://127.0.0.1:8080/fcrepo/rest
+          CIRCLE_SOLR_URL: http://127.0.0.1:8985/solr/hydra-test
+        executor:
+            name: samvera/ruby_fcrepo_solr_redis_postgres
+            ruby_version: << parameters.ruby_version >>
+        working_directory: ~/project
+        parallelism: 4
+        steps:
+            - checkout
+
+            - samvera/bundle:
+                ruby_version: << parameters.ruby_version >>
+                bundler_version: << parameters.bundler_version >>
+
+            - run:
+                name: Get yarn version
+                command: echo $(yarn --version) >> "YARN_VERSION"
+
+            - restore_cache:
+                keys:
+                    - v1-yarn-{{ checksum "yarn.lock" }}-{{ checksum "YARN_VERSION" }}
+
+            - run: yarn
+
+            - save_cache:
+                key: v1-yarn-{{ checksum "yarn.lock" }}-{{ checksum "YARN_VERSION" }}
+                paths:
+                    - ~/project/node_modules
+
+            - samvera/install_solr_core:
+                solr_config_path: solr/conf
+
+            - samvera/parallel_rspec
+
+
+    deploy-job:
+        parameters:
+            ruby_version:
+                type: string
+                default: 2.6.3
+            bundler_version:
+                type: string
+                default: 1.17.3
+        docker:
+            - image: circleci/ruby:2.6.3
+        working_directory: ~/project
+        steps:
+            - checkout
+            - samvera/bundle:
+                ruby_version: << parameters.ruby_version >>
+                bundler_version: << parameters.bundler_version >>
+            - add_ssh_keys
+            - run:
+                  name: Deploy if tests pass and branch is main
+                  command: bundle exec cap nurax-dev deploy
+
+workflows:
+    version: 2
+    ci:
+        jobs:
+            - build:
+                name: testing
+            # - deploy-job:
+            #     requires:
+            #         - testing
+            #     filters:
+            #       branches:
+                    # only: add_circle_ci
+                    # only: main # Only run deploy job when commit is on the main branch
