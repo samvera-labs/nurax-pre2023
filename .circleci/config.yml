@@ -73,7 +73,7 @@ jobs:
             - add_ssh_keys
             - run:
                   name: Deploy if tests pass and branch is Master
-                  command: bundle exec cap cd deploy
+                  command: bundle exec cap nurax-dev deploy
 
 workflows:
     version: 2
@@ -81,9 +81,10 @@ workflows:
         jobs:
             - build:
                 name: testing
-            # - deploy-job:
-            #     requires:
-            #         - testing
-            #     filters:
-            #       branches:
-            #         only: master # Only run deploy job when commit is on the master branch
+            - deploy-job:
+                requires:
+                    - testing
+                filters:
+                  branches:
+                    only: add_circle_ci
+                    # only: master # Only run deploy job when commit is on the master branch
