@@ -103,5 +103,4 @@ workflows:
                 filters:
                   branches:
                     only:
-                      - nurax-dev_ci_deploy
                       - main # Only run deploy job when commit is on the main branch
