@@ -63,8 +63,9 @@ jobs:
             bundler_version:
                 type: string
                 default: 1.17.3
-        docker:
-            - image: circleci/ruby:2.6.3
+        executor:
+            name: samvera/ruby_fcrepo_solr_redis_postgres
+            ruby_version: << parameters.ruby_version >>
         working_directory: ~/project
         steps:
             - checkout
