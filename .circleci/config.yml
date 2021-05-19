@@ -73,19 +73,17 @@ jobs:
                 bundler_version: << parameters.bundler_version >>
             - add_ssh_keys
             - run:
-                  name: Deploy if tests pass and branch is main
-                  command: bundle exec cap nurax-dev deploy
-
+                  name: Use rake to deploy with latest Hyrax
+                  command: bundle exec rake cd:nurax_dev_deploy
 workflows:
     version: 2
     ci:
         jobs:
             - build:
                 name: testing
-            # - deploy-job:
-            #     requires:
-            #         - testing
-            #     filters:
-            #       branches:
-                    # only: add_circle_ci
-                    # only: main # Only run deploy job when commit is on the main branch
+            - deploy-job:
+                filters:
+                  branches:
+                    only:
+                      - nurax-dev_ci_deploy
+                      - main # Only run deploy job when commit is on the main branch
