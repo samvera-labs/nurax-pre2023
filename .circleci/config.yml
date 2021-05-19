@@ -71,6 +71,21 @@ jobs:
             - samvera/bundle:
                 ruby_version: << parameters.ruby_version >>
                 bundler_version: << parameters.bundler_version >>
+
+            - run:
+                name: Get yarn version
+                command: echo $(yarn --version) >> "YARN_VERSION"
+
+            - restore_cache:
+                keys:
+                    - v1-yarn-{{ checksum "yarn.lock" }}-{{ checksum "YARN_VERSION" }}
+
+            - run: yarn
+
+            - save_cache:
+                key: v1-yarn-{{ checksum "yarn.lock" }}-{{ checksum "YARN_VERSION" }}
+                paths:
+                    - ~/project/node_modules
             - add_ssh_keys
             - run:
                   name: Use rake to deploy with latest Hyrax
