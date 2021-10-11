@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'bixby'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capistrano', '3.9.0'
+  gem 'capistrano', '3.16.0'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
