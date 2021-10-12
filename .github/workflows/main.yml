@@ -1,24 +1,12 @@
 
 name: Deploy with Capistrano
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  # On repository_dispatch is probably better
-  repository_dispatch:
-  push:
-    branches: [ workflow ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  repository_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      TARGET: nurax-pg.curationexperts.com
-      BRANCH: workflow
-      BUNDLE_path: ./vendor/bundle
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
@@ -27,5 +15,5 @@ jobs:
         bundler-cache: true
     - uses: miloserdow/capistrano-deploy@master
       with:
-        target: nurax-pg # Defines the environment that will be used for the deployment
-        deploy_key: ${{ secrets.DEPLOY_ENC_KEY }} # Name of the variable configured in Settings/Secrets of your github project
+        target: nurax-pg
+        deploy_key: ${{ secrets.DEPLOY_ENC_KEY }}
