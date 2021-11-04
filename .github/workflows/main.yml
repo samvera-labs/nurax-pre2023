@@ -1,5 +1,5 @@
 
-name: Deploy with Capistrano
+name: Deploy Nurax-dev with Capistrano
 on:
   workflow_dispatch:
   repository_dispatch:
