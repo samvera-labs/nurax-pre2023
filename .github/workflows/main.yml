@@ -3,6 +3,8 @@ name: Deploy Nurax-dev with Capistrano
 on:
   workflow_dispatch:
   repository_dispatch:
+  schedule:
+     - '41 10,17 * * 1-5'
 
 jobs:
   deploy:
