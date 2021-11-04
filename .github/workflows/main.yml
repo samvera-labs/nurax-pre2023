@@ -17,4 +17,3 @@ jobs:
       with:
         target: nurax-dev
         deploy_key: ${{ secrets.DEPLOY_ENC_KEY }}
-        enc_rsa_key_val: ${{ secrets.ENC_RSA_KEY_VAL }}
