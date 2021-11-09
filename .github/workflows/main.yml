@@ -10,8 +10,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      BRANCH: ${{ github.event.client_payload.sha }}
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
