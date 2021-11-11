@@ -106,3 +106,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
+
+Valkyrie::MetadataAdapter
+  .register(Valkyrie::Persistence::Memory::MetadataAdapter.new, :test_adapter)
