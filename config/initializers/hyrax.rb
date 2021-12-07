@@ -12,6 +12,18 @@ Hyrax.config do |config|
   #   registry.add(name: 'captaining', description: 'For those that really like the front lines')
   # end
 
+  # TODO: This should be based off ENV['HYRAX_ANALYTICS']
+  # TODO: Currently analytics are turned off pending setup of required ENV variables.
+  #       See /config/analytics for required ENV variables.
+  # Enable displaying usage statistics in the UI
+  # Defaults to false
+  # Requires a Google Analytics id and OAuth2 keyfile.  See README for more info
+  config.analytics = false
+
+  # TODO: This moved to ENV['GOOGLE_ANALYTICS_ID']
+  # Google Analytics tracking ID to gather usage statistics
+  # config.google_analytics_id = 'UA-106138142-1'
+
   # When an admin set is created, we need to activate a workflow.
   # The :default_active_workflow_name is the name of the workflow we will activate.
   # @see Hyrax::Configuration for additional details and defaults.
@@ -35,14 +47,6 @@ Hyrax.config do |config|
   #   maxNumberOfFiles: 100,
   #   maxFileSize: 500.megabytes
   # }
-
-  # Enable displaying usage statistics in the UI
-  # Defaults to false
-  # Requires a Google Analytics id and OAuth2 keyfile.  See README for more info
-  config.analytics = true
-
-  # Google Analytics tracking ID to gather usage statistics
-  config.google_analytics_id = 'UA-106138142-1'
 
   # Date you wish to start collecting Google Analytic statistics for
   # Leaving it blank will set the start date to when ever the file was uploaded by
