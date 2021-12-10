@@ -115,7 +115,7 @@ services:
   ##
   # SOLR Index server
   solr: &solr
-    image: solr:6-alpine
+    image: solr:8
     expose:
       - 8983
     networks:
@@ -143,7 +143,7 @@ services:
   ##
   # Fedora repository server
   fcrepo: &fcrepo
-    image: ualbertalib/docker-fcrepo4:4.7
+    image: ghcr.io/samvera/fcrepo4:4.7.5
     environment:
       - JAVA_OPTS=${JAVA_OPTS} -Dfcrepo.modeshape.configuration="classpath:/config/file-simple/repository.json" -Dfcrepo.object.directory="/data/objects" -Dfcrepo.binary.directory="/data/binaries"
     expose:
@@ -161,25 +161,27 @@ services:
   ##
   # Postgres database server
   db: &db
-    image: postgres:10-alpine
+    image: postgres:13-alpine
     networks:
       internal:
   db-dev:
     <<: *db
     environment:
       - POSTGRES_DB=development
+      - POSTGRES_PASSWORD=postgres
     volumes:
       - db-dev:/var/lib/postgresql/data
   db-test:
     <<: *db
     environment:
       - POSTGRES_DB=test
+      - POSTGRES_PASSWORD=postgres
     tmpfs: /var/lib/postgresql/data
 
   ##
   # Redis queue server
   redis: &redis
-    image: redis:4-alpine
+    image: redis:5-alpine
     command: redis-server
     networks:
       internal:
