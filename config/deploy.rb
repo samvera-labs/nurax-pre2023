@@ -63,13 +63,6 @@ namespace :sidekiq do
   end
 end
 
-namespace :bundler do
-  after :install do
-    on roles(:app) do
-      execute  :bundle, :update, :hyrax
-    end
-  end
-end
 # Capistrano passenger restart isn't working consistently,
 # so restart apache2 after a successful deploy, to ensure
 # changes are picked up.
