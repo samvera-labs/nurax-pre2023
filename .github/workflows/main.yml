@@ -11,7 +11,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      HYRAX_TARGET: main
+      HYRAX_TARGET: ${{ github.event.client_payload.sha }}
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
