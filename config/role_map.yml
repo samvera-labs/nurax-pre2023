@@ -31,6 +31,7 @@ development:
     - sarah.imholt@oregonstate.edu
     - scherztc@ucmail.uc.edu
     - tao.zhao.lib@gmail.com
+    - dwithana@iu.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -77,6 +78,7 @@ production:
     - crissmeyer@ucsb.edu
     - gjanee@ucsb.edu
     - tao.zhao.lib@gmail.com
+    - dwithana@iu.edu
 test:
   archivist:
     - archivist1@example.com
