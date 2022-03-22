@@ -33,6 +33,7 @@ development:
     - tao.zhao.lib@gmail.com
     - dwithana@iu.edu
     - mat@northwestern.edu
+    - ayoub.belemlih@emory.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -81,6 +82,7 @@ production:
     - tao.zhao.lib@gmail.com
     - dwithana@iu.edu
     - mat@northwestern.edu
+    - ayoub.belemlih@emory.edu
 test:
   archivist:
     - archivist1@example.com
