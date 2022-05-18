@@ -31,6 +31,9 @@ development:
     - sarah.imholt@oregonstate.edu
     - scherztc@ucmail.uc.edu
     - tao.zhao.lib@gmail.com
+    - dwithana@iu.edu
+    - mat@northwestern.edu
+    - ayoub.belemlih@emory.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -78,6 +81,9 @@ production:
     - gjanee@ucsb.edu
     - tao.zhao.lib@gmail.com
     - rachel@curationexperts.com
+    - dwithana@iu.edu
+    - mat@northwestern.edu
+    - ayoub.belemlih@emory.edu
 test:
   archivist:
     - archivist1@example.com

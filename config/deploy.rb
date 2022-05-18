@@ -63,6 +63,19 @@ namespace :sidekiq do
   end
 end
 
+namespace :bundler do
+  after :install, :update do
+    on roles(:app) do
+      within release_path do
+        if (ENV['HYRAX_TARGET'] || 'main') == 'main'
+          execute  :bundle, :config, :unset, :deployment
+          execute  :bundle, :update, '--quiet', '--source', 'samvera/hyrax hyrax'
+          execute  :bundle, :config, '--local', :set, :deployment, :true
+        end
+      end
+    end
+  end
+end
 # Capistrano passenger restart isn't working consistently,
 # so restart apache2 after a successful deploy, to ensure
 # changes are picked up.

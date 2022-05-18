@@ -1,4 +1,4 @@
-FROM ruby:2.5.1
+FROM ruby:2.7
 
 ARG RAILS_ENV
 ARG SECRET_KEY_BASE
@@ -8,11 +8,9 @@ ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
 # add nodejs and yarn dependencies for the frontend
-RUN curl -sL https://deb.nodesource.com/setup_9.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
-RUN gem install bundler
 
 # --allow-unauthenticated needed for yarn package
 RUN apt-get update && apt-get upgrade -y && \
@@ -20,20 +18,22 @@ RUN apt-get update && apt-get upgrade -y && \
   build-essential libpq-dev libreoffice imagemagick unzip ghostscript vim \
   ffmpeg \
   clamav-freshclam clamav-daemon libclamav-dev \
-  qt5-default libqt5webkit5-dev xvfb xauth openjdk-8-jre --fix-missing --allow-unauthenticated
+  libqt5webkit5-dev xvfb xauth default-jre-headless --fix-missing --allow-unauthenticated
 
 # fetch clamav local database
 # initial update of av databases
-RUN mkdir -p /var/lib/clamav && \
-  wget -O /var/lib/clamav/main.cvd http://database.clamav.net/main.cvd && \
-  wget -O /var/lib/clamav/daily.cvd http://database.clamav.net/daily.cvd && \
-  wget -O /var/lib/clamav/bytecode.cvd http://database.clamav.net/bytecode.cvd && \
-  chown clamav:clamav /var/lib/clamav/*.cvd
+RUN freshclam
 
 # install FITS for file characterization
 RUN mkdir -p /opt/fits && \
-  curl -fSL -o /opt/fits-1.0.5.zip http://projects.iq.harvard.edu/files/fits/files/fits-1.0.5.zip && \
-  cd /opt && unzip fits-1.0.5.zip && chmod +X fits-1.0.5/fits.sh
+    curl -fSL -o /opt/fits/fits-1.5.0.zip https://github.com/harvard-lts/fits/releases/download/1.5.0/fits-1.5.0.zip && \
+    cd /opt/fits && unzip fits-1.5.0.zip && chmod +X fits.sh && rm fits-1.5.0.zip
+ENV PATH /opt/fits:$PATH
+
+# Increase stack size limit to help working with large works
+ENV RUBY_THREAD_MACHINE_STACK_SIZE 8388608
+
+RUN gem update --system
 
 RUN mkdir /data
 WORKDIR /data
@@ -46,9 +46,8 @@ RUN mkdir /data/build
 ADD ./build/install_gems.sh /data/build
 RUN ./build/install_gems.sh
 
-# install node dependencies, after there are some included
-# COPY package.json yarn.lock /data/
-# RUN yarn install
-
 # Add the application code
 ADD . /data
+
+# install node dependencies, after there are some included
+RUN yarn install
