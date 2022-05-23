@@ -34,8 +34,8 @@ development:
     - dwithana@iu.edu
     - mat@northwestern.edu
     - ayoub.belemlih@emory.edu
-    - elizabeth.james1@mail.wvu.edu
     - brad.watson.orlando@gmail.com
+    - edj00004@mix.wvu.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -85,8 +85,8 @@ production:
     - dwithana@iu.edu
     - mat@northwestern.edu
     - ayoub.belemlih@emory.edu
-    - elizabeth.james1@mail.wvu.edu
     - brad.watson.orlando@gmail.com
+    - edj00004@mix.wvu.edu
 test:
   archivist:
     - archivist1@example.com
