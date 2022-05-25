@@ -64,7 +64,7 @@ jobs:
                 default: 2.6.7
             bundler_version:
                 type: string
-                default: 2.2.29
+                default: 2.2.30
         executor:
             name: samvera/ruby_fcrepo_solr_redis_postgres
             ruby_version: << parameters.ruby_version >>
