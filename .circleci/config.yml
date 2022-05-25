@@ -1,15 +1,16 @@
 version: 2.1
 orbs:
     samvera: samvera/circleci-orb@1.0.3
+    browser-tools: circleci/browser-tools@1.2.4
 jobs:
     build:
         parameters:
             ruby_version:
                 type: string
-                default: 2.6.3
+                default: 2.6.7
             bundler_version:
                 type: string
-                default: 2.2.29
+                default: 2.2.30
         environment:
           DATABASE_URL: postgresql://postgres@127.0.0.1/circle_test
           DATABASE_NAME: circle_test
@@ -21,7 +22,10 @@ jobs:
           UPLOAD_PATH: /tmp
           CACHE_PATH: /tmp/cache
           CIRCLE_FEDORA_URL: http://127.0.0.1:8080/fcrepo/rest
+          FEDORA_TEST_URL: http://127.0.0.1:8080/fcrepo/rest
           CIRCLE_SOLR_URL: http://127.0.0.1:8985/solr/hydra-test
+          SOLR_TEST_URL: http://127.0.0.1:8985/solr/hydra-test
+          
         executor:
             name: samvera/ruby_fcrepo_solr_redis_postgres
             ruby_version: << parameters.ruby_version >>
@@ -29,7 +33,8 @@ jobs:
         parallelism: 4
         steps:
             - checkout
-
+            - run: sudo apt update 
+            - run: sudo apt install -y libsqlite3-dev
             - samvera/bundle:
                 ruby_version: << parameters.ruby_version >>
                 bundler_version: << parameters.bundler_version >>
