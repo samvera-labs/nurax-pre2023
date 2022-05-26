@@ -10,7 +10,7 @@ namespace :cd do
 
     today = Time.now.strftime('%Y-%m-%e-%H-%M')
     `git checkout main; git pull; git checkout -b "#{today}"`
-    `bundle update -V hyrax`
+    system('bundle update -V hyrax')
     `git commit -a -m 'Daily update for "#{today}"'; git push --set-upstream origin #{today}`
     `BRANCH_NAME="#{today}" cap nurax-dev deploy`
     `git checkout main; git push origin --delete "#{today}"`
