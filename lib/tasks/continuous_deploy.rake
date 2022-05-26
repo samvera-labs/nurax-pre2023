@@ -13,7 +13,7 @@ namespace :cd do
     system('bundle update hyrax')
     `git config user.email "cd@curationexperts.com" && git config user.name "circleci"`
     `git commit -a -m 'Daily update for "#{today}"'; git push --set-upstream origin #{today}`
-    `BRANCH_NAME="#{today}" cap nurax-dev deploy`
+    system("BRANCH_NAME=\"#{today}\" cap nurax-dev deploy")
     `git checkout main; git push origin --delete "#{today}"`
     `git checkout main; git branch -D "#{today}"`
   end
