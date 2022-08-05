@@ -7,10 +7,10 @@ jobs:
         parameters:
             ruby_version:
                 type: string
-                default: 2.6.7
+                default: 2.7.6
             bundler_version:
                 type: string
-                default: 2.2.30
+                default: 2.3.17
         environment:
           DATABASE_URL: postgresql://postgres@127.0.0.1/circle_test
           DATABASE_NAME: circle_test
@@ -61,10 +61,10 @@ jobs:
         parameters:
             ruby_version:
                 type: string
-                default: 2.6.7
+                default: 2.7.6
             bundler_version:
                 type: string
-                default: 2.2.30
+                default: 2.3.17
         executor:
             name: samvera/ruby_fcrepo_solr_redis_postgres
             ruby_version: << parameters.ruby_version >>

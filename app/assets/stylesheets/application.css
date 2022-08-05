@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+ *= require dataTables.bootstrap4
  *= require_self
  */
 
@@ -43,6 +43,6 @@ a.footer-link {
 
 #copyright {
     color: #ffffff;
-//    line-height: 150%;
-//    margin-top: 3.5%;
+    /* line-height: 150%; */
+    /* margin-top: 3.5%; */
 }
