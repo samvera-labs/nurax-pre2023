@@ -16,9 +16,13 @@
 // Required by Blacklight
 //= require jquery3
 //= require rails-ujs
+//= require popper
+//= require twitter/typeahead
+//= require bootstrap
 //= require jquery.dataTables
 //= require dataTables.bootstrap4
 //= require blacklight/blacklight
+//= require blacklight_gallery
 
 //= require_tree .
 //= require hyrax
