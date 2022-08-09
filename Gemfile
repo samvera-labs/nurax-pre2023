@@ -81,3 +81,5 @@ gem 'jquery-rails'
 gem 'sidekiq'
 
 gem 'riiif', '~> 2.0'
+
+gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
