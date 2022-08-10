@@ -36,6 +36,7 @@ development:
     - ayoub.belemlih@emory.edu
     - elizabeth.james1@mail.wvu.edu
     - brad.watson.orlando@gmail.com
+    - dlpierce@indiana.edu
 production:
   admin:
     - mjgiarlo@stanford.edu
@@ -88,6 +89,7 @@ production:
     - ayoub.belemlih@emory.edu
     - elizabeth.james1@mail.wvu.edu
     - brad.watson.orlando@gmail.com
+    - dlpierce@indiana.edu
 test:
   archivist:
     - archivist1@example.com
