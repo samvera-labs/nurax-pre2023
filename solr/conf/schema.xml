@@ -261,8 +261,6 @@
     <!-- date range (_dr...) (for faster AND better range queries) -->
     <dynamicField name="*_dri" type="dateRange" stored="false" indexed="true" multiValued="false"/>
     <dynamicField name="*_drim" type="dateRange" stored="false" indexed="true" multiValued="true"/>
-    <dynamicField name="*_drs" type="dateRange" stored="true" indexed="false" multiValued="false"/>
-    <dynamicField name="*_drsm" type="dateRange" stored="true" indexed="false" multiValued="true"/>
     <dynamicField name="*_drsi" type="dateRange" stored="true" indexed="true" multiValued="false"/>
     <dynamicField name="*_drsim" type="dateRange" stored="true" indexed="true" multiValued="true"/>
 

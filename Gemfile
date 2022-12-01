@@ -5,11 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "actionview", ">= 5.1.6.2"
 gem 'dotenv-rails'
 gem 'honeybadger', '~> 3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1'
+gem 'rails', '6.0.5.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use postgresql on the sandbox
@@ -17,7 +16,7 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -72,6 +71,7 @@ end
 
 gem 'hyrax', github: 'samvera/hyrax', branch: ENV['HYRAX_TARGET'] || 'main'
 # gem 'hyrax', '2.1.0'
+gem 'bootstrap', '~> 4.0'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-guests', '~> 0.6'
@@ -81,3 +81,5 @@ gem 'jquery-rails'
 gem 'sidekiq'
 
 gem 'riiif', '~> 2.0'
+
+gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
